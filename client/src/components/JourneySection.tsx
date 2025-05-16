@@ -24,14 +24,14 @@ const JourneySection = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="timeline-dot"></div>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="md:text-right md:pr-12">
+            <div className="md:grid md:grid-cols-[150px_1fr] gap-8">
+              <div className="mb-4 md:mb-0">
                 <h3 className="text-xl font-semibold">IT Support Technician</h3>
                 <p className="text-primary font-medium">Stratford Hall</p>
                 <p className="text-sm text-muted-foreground">JAN 2024 - AUG 2024</p>
               </div>
-              <div className="p-6 bg-primary/5 rounded-lg md:pl-12">
-                <ul className="space-y-2 list-disc list-inside text-sm md:text-base">
+              <div className="p-6 bg-primary/5 rounded-lg">
+                <ul className="space-y-2 list-disc ml-5 text-sm md:text-base">
                   <li>Delivered Tier 1 technical support to 120+ staff and students across workstations, laptops, printers, mobile devices, and AV systems.</li>
                   <li>Troubleshot and resolved 90% of software, network, and hardware issues on first contact for local and remote users.</li>
                   <li>Resolved basic connectivity and VPN access issues for staff, including Wi-Fi troubleshooting and remote access setup across Windows/macOS devices.</li>
@@ -52,14 +52,14 @@ const JourneySection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="timeline-dot"></div>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="md:text-right md:pr-12">
+            <div className="md:grid md:grid-cols-[150px_1fr] gap-8">
+              <div className="mb-4 md:mb-0">
                 <h3 className="text-xl font-semibold">Computer Information Technology Diploma</h3>
                 <p className="text-primary font-medium">British Columbia Institute of Technology</p>
                 <p className="text-sm text-muted-foreground">2022 - 2024</p>
                 <p className="font-medium">GPA: 90%</p>
               </div>
-              <div className="p-6 bg-primary/5 rounded-lg md:pl-12">
+              <div className="p-6 bg-primary/5 rounded-lg">
                 <img
                   src="https://pixabay.com/get/gef52cd873e4315992c735f4269b5550b92aa15ffeeb4d6f5a2d5a4212d986772bcc2f348e0b548023e763f18d926fc6c4042b2b57bf3d94654781823019c078b_1280.jpg"
                   alt="BCIT Campus"

@@ -42,8 +42,8 @@ function App() {
       <main className="pt-20">
         <HeroSection />
         <JourneySection />
-        <ProjectsSection />
         <SkillsSection />
+        <ProjectsSection />
         <ContactSection />
       </main>
       <Footer />

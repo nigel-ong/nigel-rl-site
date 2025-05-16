@@ -40,36 +40,36 @@ const ContactSection = () => {
         </motion.h2>
 
         <motion.div
-          className="max-w-2xl mx-auto bg-card text-card-foreground rounded-xl shadow-lg p-8 section-enter"
+          className="max-w-xl mx-auto section-enter"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <p className="text-center mb-8">
-            I'm currently open to opportunities in IT Support and Development. Feel free to reach out through any of the channels below:
+            I'm currently open to opportunities in IT Support and Development. Feel free to reach out:
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <div className="flex justify-center items-center space-x-8 md:space-x-12">
             {contactInfo.map((contact, index) => (
               <motion.a
                 key={index}
                 href={contact.link}
                 target={contact.type !== "Email" ? "_blank" : undefined}
                 rel={contact.type !== "Email" ? "noopener noreferrer" : undefined}
-                className="group p-6 rounded-lg hover:bg-muted transition-colors"
+                className="group flex flex-col items-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
+                aria-label={contact.type}
               >
-                <div className="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-primary bg-opacity-20 text-primary mb-4 group-hover:bg-opacity-40 transition-colors">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary bg-opacity-20 text-primary mb-2 group-hover:bg-opacity-40 transition-colors">
                   {contact.icon}
                 </div>
-                <h3 className="font-semibold mb-2">{contact.type}</h3>
-                <p className="text-sm text-muted-foreground break-all">{contact.display}</p>
+                <span className="text-sm font-medium">{contact.type}</span>
               </motion.a>
             ))}
           </div>
