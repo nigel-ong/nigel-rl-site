@@ -82,14 +82,14 @@ const HeroSection = () => {
             variants={fadeIn}
             custom={0}
           >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-lg overflow-hidden border-4 border-primary">
               <img 
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
                 alt="Nigel Ong" 
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary to-secondary opacity-20"></div>
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-tr from-primary to-secondary opacity-20"></div>
             </div>
           </motion.div>
         </div>

@@ -131,38 +131,38 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`mobile-menu fixed top-[65px] right-0 bottom-0 bg-background w-full md:hidden z-20 p-6 border-t border-border ${
+        className={`mobile-menu fixed top-[65px] right-0 bg-background/90 backdrop-blur-sm w-auto md:hidden z-20 p-6 border-t border-l border-b border-border rounded-bl-lg shadow-lg ${
           isMobileMenuOpen ? "open" : ""
         }`}
       >
         <div className="flex flex-col space-y-6 text-lg">
           <button
             onClick={() => scrollToSection("about")}
-            className="hover:text-primary transition-colors"
+            className="hover:text-primary transition-colors font-medium"
           >
             About
           </button>
           <button
             onClick={() => scrollToSection("journey")}
-            className="hover:text-primary transition-colors"
+            className="hover:text-primary transition-colors font-medium"
           >
             Journey
           </button>
           <button
-            onClick={() => scrollToSection("projects")}
-            className="hover:text-primary transition-colors"
-          >
-            Projects
-          </button>
-          <button
             onClick={() => scrollToSection("skills")}
-            className="hover:text-primary transition-colors"
+            className="hover:text-primary transition-colors font-medium"
           >
             Skills
           </button>
           <button
+            onClick={() => scrollToSection("projects")}
+            className="hover:text-primary transition-colors font-medium"
+          >
+            Projects
+          </button>
+          <button
             onClick={() => scrollToSection("contact")}
-            className="hover:text-primary transition-colors"
+            className="hover:text-primary transition-colors font-medium"
           >
             Contact
           </button>
