@@ -13,11 +13,11 @@
   --card-foreground: 20 14.3% 4.1%;
   --border: 20 5.9% 90%;
   --input: 20 5.9% 90%;
-  --primary: 207 43% 81%;
+  --primary: 221 71% 57%; /* #567ACE for light mode */
   --primary-foreground: 210 11% 15%;
-  --secondary: 334 70% 89%;
+  --secondary: 328 63% 90%; /* #F1D2E7 */
   --secondary-foreground: 335 43% 16%;
-  --accent: 264 34% 84%;
+  --accent: 328 63% 90%; /* #F1D2E7 */
   --accent-foreground: 265 40% 16%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 60 9.1% 97.8%;
@@ -36,11 +36,11 @@
   --card-foreground: 0 0% 98%;
   --border: 240 3.7% 15.9%;
   --input: 240 3.7% 15.9%;
-  --primary: 207 43% 81%;
+  --primary: 203 53% 81%; /* #B7D3E9 for dark mode */
   --primary-foreground: 210 11% 15%;
-  --secondary: 334 70% 89%;
+  --secondary: 328 63% 90%; /* #F1D2E7 */
   --secondary-foreground: 335 43% 16%;
-  --accent: 264 34% 84%;
+  --accent: 328 63% 90%; /* #F1D2E7 */
   --accent-foreground: 265 40% 16%;
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
@@ -132,6 +132,10 @@
   width: 0%;
   z-index: 40;
   transition: width 0.2s ease;
+}
+
+.light .progress-bar {
+  background: linear-gradient(to right, #567ACE, #F1D2E7);
 }
 
 /* Section transitions */
