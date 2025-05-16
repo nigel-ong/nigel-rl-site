@@ -1,0 +1,234 @@
+## Project: Nigel Ong’s Personal Website
+
+### 🚀 Project Overview
+
+Design and develop a fully static, modern, and responsive personal website for Nigel Ong. The website will showcase Nigel’s technical experience, IT support background, and portfolio of projects. It must be compatible with GitHub Pages, require no server-side dependencies, and be easily maintainable. Do not make a checkpoint until you are finished all requirements in the prompts
+
+### 🏋️ Goals and Success Criteria
+
+- Sleek, dark-themed design with light mode toggle
+- Fully functional on both desktop and mobile
+- GitHub Pages compatible with static site generation
+- Easy-to-edit content using markdown or JSON
+- Fast performance, clean UI, and accessible design
+- Clear documentation (README.md) with setup and update instructions
+- Easy for Nigel to maintain and extend
+
+---
+
+## 🛠️ Functional & Technical Requirements
+
+### Compatibility
+
+- Built using a static site generator (e.g., Jekyll, Hugo, Astro, or plain HTML/CSS/JS)
+- No server-side logic (must be fully static)
+- Fully deployable on GitHub Pages with GitHub Actions for CI/CD ****
+- No database or CMS required, but Markdown/JSON for content is ideal
+
+### Light/Dark Mode
+
+- Toggle with correct color contrast for all elements
+- Save preference in local storage
+- Make sure toggle mode works correctly and contrasts in each mode. Make sure all elements on the page in each mode changes accordingly
+
+### Responsive Design
+
+- Fully mobile-optimized with a sticky navigation bar
+- Hamburger menu with a solid background color in mobile view
+- Responsive across devices
+- Accessible: Use semantic HTML, alt text, proper contrast
+- Save light/dark mode preferences in localStorage
+- Smooth scroll behavior
+- Lazy loading for images
+- Fast initial load
+
+### Mouse Interaction
+
+- Subtle desktop-only visual effect that follows cursor (e.g., hover glow or parallax)
+
+### Branding and Colors
+
+- Primary highlight colors:
+    - `#B7D3E9` (light blue)
+    - `#F1D2E7` (light pink)
+- Replace top-left logo with "NigelOng"
+    - "Nigel" in `#B7D3E9`, "Ong" in default text color
+
+## Design Requirements
+
+- **Theme:** Dark mode primary, with toggle for light mode
+- **Typography:** Modern sans-serif (e.g., Inter, Roboto)
+- **Animations:** Subtle on scroll and hover
+- **Inspiration:** Sleek sites like [https://leerob.io](https://leerob.io/), [https://brittanychiang.com](https://brittanychiang.com/)
+- **Color palette:**
+    - Background: Dark grey or black
+        - light mode [`f2efe5`](https://www.color-hex.com/color/f2efe5)
+    - Accent: `#B7D3E9` , `F1D2E7` , or `#BBB0DC`
+    - Text: [`f2efe5`](https://www.color-hex.com/color/f2efe5)/light gray
+
+## Performance & Optimization
+
+- Minify HTML, CSS, JS
+- Use `.webp` or compressed `.jpg` for images
+- Lighthouse score goals as above
+- Defer non-critical JavaScript
+
+## Content Management
+
+- Store text/images in structured `content/` folder
+- Allow edits via Markdown or JSON files
+- No CMS needed but can be easily integrated later if desired
+
+---
+
+## 🔹 Navigation & Sections
+
+### Navigation
+
+- Sticky top navigation with smooth scrolling
+- Menu items: About, Journey, Projects, Skills, Contact
+- GitHub, LinkedIn, Dark/Light mode icons with links in the navbar
+- Icons are tight to the corner, menu items are centered
+- Mobile nav should collapse into a hamburger menu.
+
+### Sections
+
+### About Me
+
+Profile picture (Square)
+
+- Bio:
+
+> Through my experience and training at BCIT in the Computer Information Technology program, I’ve developed a problem-solving mindset rooted in structure and speed.
+> 
+> 
+> I thrive in environments where I can keep learning, contribute meaningfully, and work alongside people who care about doing things right. I’ve supported environments with 600+ users, managed everything from user management to delivering tech events and live streams.
+> 
+> Whether I’m resolving a technical issue or helping someone feel more confident using their tools, my focus is always on providing thoughtful, reliable support — the kind of support I’d want to receive. I’m looking to grow with a team that values curiosity, communication, and the power of well-run systems.
+> 
+- Short 2–3 paragraph introduction
+- Emphasize Nigel’s background in IT and support
+
+### Journey /Timeline / Experience
+
+> WORK EXPERIENCE
+IT Support Technician - Stratford Hall JAN 2024 - AUG 2024
+• Delivered Tier 1 technical support to 120+ staff and students across workstations, laptops, printers, mobile
+devices, and AV systems in a fast-paced school environment.
+• Troubleshot and resolved 90% of software, network, and hardware issues on first contact for local and remote
+users via phone and chat, using a proprietary SharePoint-based ITSM system.
+• Resolved basic connectivity and VPN access issues for staff, including Wi-Fi troubleshooting and remote access
+setup across Windows/macOS devices.
+• Performed imaging, deployment, and upgrading of Windows and macOS devices, including VoIP phones,
+printers, and iPads; ensured timely support across campus.
+• Conducted preventative maintenance and routine diagnostics on shared classroom tech, printers, and
+workstation setups—minimizing downtime and extending device life.
+• Contributed to internal documentation and process improvements to support self-service and reduce repeat
+incidents.
+• Monitored and supported Meraki-based networking equipment for Wi-Fi access to staff, students and guests.
+• Administered onboarding/offboarding processes for staff using Google Workspace, Microsoft 365, MDM
+tools (Mosyle) and VoIP 3CX Phone System.
+• Delivered hands-on training to both a replacement and returning team member, covering device imaging, ticket
+triage, and user onboarding workflows to ensure consistent service quality.
+• Assisted in lifecycle support including asset tracking, equipment setup, decommissioning of EOL hardware,
+and hardware upgrading/recycling following IT policy.
+• Led large-scale imaging and deployment of Windows, MacBooks, and Chromebooks in preparation for the
+new academic year. Provisioned macOS devices using manual workflows, ensuring fast turnaround for both staff
+and students.
+• Maintained a strong reputation for clear communication and a helpful, user-first approach in high-pressure
+environments."
+> 
+- Uniform vertical layout
+- Milestones: education, certifications, work history
+- Each entry takes up reasonable horizonal width in bubbles
+- Optional logo/image per entry
+
+### Education
+
+- **British Columbia Institute of Technology (2022–2024)**
+    - Computer Information Technology Diploma | GPA: 90%
+
+### Projects
+
+- Grid layout
+- Project cards with:
+    - Title, description, tags
+    - GitHub/demo button links (styled buttons)
+    - Thumbnail or video
+    - If there is a video (on youtube) pop up an embedded player
+- **Memo Rizz**
+
+> A memo-taking web app developed during BCIT in a group of five. Interactive and deployed on Render.com. App instance may take time to spin up.
+Note: Account data is temporary. [Live Demo](https://memorizz-z18i.onrender.com/) https://memorizz-z18i.onrender.com/
+> 
+- **Pose IT**
+
+> An interactive XR app for the BCIT Tech Collider Wall. Players mimic avatar poses and receive a percentage-based score.
+[Demo Video (YouTube)](https://www.youtube.com/watch?v=-vS5hrA8dEI) https://www.youtube.com/watch?v=-vS5hrA8dEI
+
+[ReachXR Info](https://reachxr.com/) https://reachxr.com/
+> 
+
+### Skills
+
+- Categorized list only (no percentages or progress bars)
+- Example Categories:
+    - Operating Systems: macOS, iOS, Windows, Linux, etc.
+    - DevOps: SSH, AWS, Azure, Docker, Kubernetes, etc.
+    - Admin Tools: Google Admin, Mosyle, Active Directory
+    - Applications: MS Office, Google Workspace, Meraki
+    - ITSM & Ticketing: SharePoint, documentation workflows
+    - Programming Languages: Python, JavaScript,
+
+### Contact
+
+- Do not include a contact form for visitors to enter information
+- Display icons with links:
+    - Email: nigel.ong00@gmail.com
+    - LinkedIn: [niong](https://linkedin.com/in/niong)
+    - GitHub: [nigel-ong](https://github.com/nigel-ong)
+
+---
+
+## 📚 README.md Documentation
+
+Include a full `README.md` with:
+
+### Table of Contents
+
+- About
+- Journey
+- Projects
+- Skills
+- Contact
+- Light/Dark Mode
+- Navbar & Branding
+- Updating Content
+- Local Setup
+- GitHub Pages Deployment
+
+### How To:
+
+- Add/update content in Markdown or JSON
+- Add new projects (with image/video)
+- Change or add navbar icons (LinkedIn/GitHub)
+- Modify highlight colors and typography
+- Embed videos or company logos in timeline
+
+### Deployment
+
+- How to build locally
+- How to auto-deploy using GitHub Actions
+- File/folder structure explanation
+- GitHub Pages (hosted from `/docs` folder or `gh-pages` branch)
+- Auto-deploy via GitHub Actions on push to `main`
+- `README.md` should have clear setup, build, and deployment instructions
+
+---
+
+## ✨ Stretch Features (Optional)
+
+- Scroll-triggered animations
+- Offline support (basic service worker)
+- Google Analytics or Plausible
+- SEO & Open Graph support
