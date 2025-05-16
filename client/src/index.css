@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 42 13% 94%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 221 71% 57%; /* #567ACE for light mode */
+  --primary-foreground: 210 11% 15%;
+  --secondary: 328 63% 90%; /* #F1D2E7 */
+  --secondary-foreground: 335 43% 16%;
+  --accent: 328 63% 90%; /* #F1D2E7 */
+  --accent-foreground: 265 40% 16%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 20 14.3% 4.1%;
+  --foreground: 42 13% 94%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 203 53% 81%; /* #B7D3E9 for dark mode */
+  --primary-foreground: 210 11% 15%;
+  --secondary: 328 63% 90%; /* #F1D2E7 */
+  --secondary-foreground: 335 43% 16%;
+  --accent: 328 63% 90%; /* #F1D2E7 */
+  --accent-foreground: 265 40% 16%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    @apply antialiased bg-background text-foreground;
+  }
+}
+
+/* Timeline styles */
+.timeline-container {
+  position: relative;
+}
+
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: hsl(var(--primary) / 0.5);
+  top: 0;
+  bottom: 0;
+  left: 50px;
+  margin-left: -1px;
+}
+
+@media (max-width: 767px) {
+  .timeline-container::after {
+    display: none;
+  }
+}
+
+.timeline-dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  z-index: 1;
+  left: 50px;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #B7D3E9, #F1D2E7);
+}
+
+.light .timeline-dot {
+  background: linear-gradient(135deg, #567ACE, #F1D2E7);
+}
+
+@media (max-width: 767px) {
+  .timeline-dot {
+    display: none;
+  }
+}
+
+/* Cursor spotlight effect */
+.cursor-spotlight {
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dark .cursor-spotlight {
+  background: radial-gradient(circle, rgba(183, 211, 233, 0.15) 0%, rgba(241, 210, 231, 0.08) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.light .cursor-spotlight {
+  background: radial-gradient(circle, rgba(86, 122, 206, 0.15) 0%, rgba(241, 210, 231, 0.08) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Progress bar */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(to right, #B7D3E9, #F1D2E7);
+  width: 0%;
+  z-index: 40;
+  transition: width 0.2s ease;
+}
+
+.light .progress-bar {
+  background: linear-gradient(to right, #567ACE, #F1D2E7);
+}
+
+/* Section transitions */
+.section-enter {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-enter.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile menu animation */
+.mobile-menu {
+  transition: transform 0.3s ease;
+  transform: translateX(100%);
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}

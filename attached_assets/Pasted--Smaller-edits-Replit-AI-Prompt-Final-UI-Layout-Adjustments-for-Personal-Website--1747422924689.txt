@@ -1,0 +1,91 @@
+- Smaller edits
+    
+    ### Replit AI Prompt: Final UI & Layout Adjustments for Personal Website
+    
+    Hi Replit, I need help polishing the final layout and UI responsiveness of my GitHub Pages-compatible personal website. Do not make a checkpoint until you are finished all requirements in the prompts and verified it works as intended. Please apply the following updates:
+    
+    ---
+    
+    ## 🧭 Layout & Section Order
+    
+    - **Move the Technical Skills section above Projects.**
+        
+        (i.e., section order: About → Journey → Skills → Projects → Contact)
+        
+    
+    ---
+    
+    ## 📬 Contact Section (Ref: Screenshot)
+    
+    - Make the **Contact section more minimalistic and compact**, especially in desktop view.
+    - Instead of large cards, show **icons (Email, LinkedIn, GitHub)** with subtle hover effects.
+    - Ensure this layout is **responsive and centered** in both mobile and desktop views.
+    - Icon links:
+        - Email: `mailto:nigel.ong00@gmail.com`
+        - LinkedIn: [`https://linkedin.com/in/niong`](https://linkedin.com/in/niong)
+        - GitHub: [`https://github.com/nigel-ong`](https://github.com/nigel-ong)
+    
+    ---
+    
+    ## 📐 Journey Section (Professional Timeline)
+    
+    - In **desktop mode**, the timeline line is currently centered — **shift the vertical timeline line to the left side**.
+    - Align all timeline content (jobs and education) on the **right side**, and allow it to take up **more horizontal space** for readability.
+    - **In the mobile version** remove the vertical timeline line all together.
+    
+    ---
+    
+    ## 🍔 Mobile Menu Fixes
+    
+    - When opening the **hamburger menu**, the section links (About, Journey, Projects, etc.) are **transparent** and hard to see.
+    - Add a **solid background** behind the dropdown (e.g., white or off-white for light mode, dark for dark mode make **opacity** 90%).
+    - Keep the menu **lightweight and not full-screen** — it should only cover the dropdown items, not the entire page.
+    
+    ---
+    
+    ## 💡 Hover Effect Fixes
+    
+    - The **hover/mouse-follow effect currently only works in dark mode**.
+    - Make it **work in light mode too**.
+    - Reduce the **circle size to approximately 1/10th of the screen width** for a cleaner, subtler feel.
+    
+    ---
+    
+    ## Font Change: Use Inter
+    
+    - Replace the current `system-ui` font stack with **`Inter`** as the site’s global font.
+    - Add the following Google Fonts import to the `<head>`:
+    
+    ```html
+    html
+    CopyEdit
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    ```
+    
+    - In the CSS:
+    
+    ```css
+    css
+    CopyEdit
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    ```
+    
+    ---
+    
+    - Change the **profile image** from a **circle** to a **square** with subtle rounded corners.
+    - Ensure the shape remains consistent in **both desktop and mobile views**.
+    
+    ---
+    
+    Please make sure all updates:
+    
+    - Are responsive across devices
+    - Work in both light and dark mode
+    - Maintain consistent styling using my primary brand colors:
+        - `#B7D3E9` (accent color)
+        - `#F1D2E7` (subtle background or highlight)
+        - when in light mode change any accent color from`#B7D3E9` to `567ACE`
