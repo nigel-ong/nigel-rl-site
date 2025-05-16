@@ -50,14 +50,14 @@ const ContactSection = () => {
             I'm currently open to opportunities in IT Support and Development. Feel free to reach out:
           </p>
 
-          <div className="flex justify-center items-center space-x-8 md:space-x-12">
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-12">
             {contactInfo.map((contact, index) => (
               <motion.a
                 key={index}
                 href={contact.link}
                 target={contact.type !== "Email" ? "_blank" : undefined}
                 rel={contact.type !== "Email" ? "noopener noreferrer" : undefined}
-                className="group flex flex-col items-center"
+                className="group flex items-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -66,7 +66,7 @@ const ContactSection = () => {
                 whileTap={{ scale: 0.95 }}
                 aria-label={contact.type}
               >
-                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary bg-opacity-20 text-primary mb-2 group-hover:bg-opacity-40 transition-colors">
+                <div className="text-primary text-2xl mr-3 group-hover:text-opacity-80 transition-colors">
                   {contact.icon}
                 </div>
                 <span className="text-sm font-medium">{contact.type}</span>

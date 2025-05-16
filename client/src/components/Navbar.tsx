@@ -131,7 +131,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`mobile-menu fixed top-[65px] right-0 bg-background/90 backdrop-blur-sm w-auto md:hidden z-20 p-6 border-t border-l border-b border-border rounded-bl-lg shadow-lg ${
+        className={`mobile-menu fixed top-[65px] left-0 right-0 bg-background/90 backdrop-blur-sm w-full md:hidden z-20 p-6 border-t border-border shadow-lg ${
           isMobileMenuOpen ? "open" : ""
         }`}
       >
