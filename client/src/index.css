@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 42 13% 94%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 207 43% 81%;
+  --primary-foreground: 210 11% 15%;
+  --secondary: 334 70% 89%;
+  --secondary-foreground: 335 43% 16%;
+  --accent: 264 34% 84%;
+  --accent-foreground: 265 40% 16%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 20 14.3% 4.1%;
+  --foreground: 42 13% 94%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 43% 81%;
+  --primary-foreground: 210 11% 15%;
+  --secondary: 334 70% 89%;
+  --secondary-foreground: 335 43% 16%;
+  --accent: 264 34% 84%;
+  --accent-foreground: 265 40% 16%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Timeline styles */
+.timeline-container {
+  position: relative;
+}
+
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: hsl(var(--primary) / 0.5);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+@media (max-width: 767px) {
+  .timeline-container::after {
+    left: 31px;
+  }
+}
+
+.timeline-dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #B7D3E9, #F1D2E7);
+}
+
+@media (max-width: 767px) {
+  .timeline-dot {
+    left: 31px;
+  }
+}
+
+/* Cursor spotlight effect */
+.cursor-spotlight {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(183, 211, 233, 0.15) 0%, rgba(241, 210, 231, 0.08) 50%, rgba(0, 0, 0, 0) 100%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Progress bar */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(to right, #B7D3E9, #F1D2E7);
+  width: 0%;
+  z-index: 40;
+  transition: width 0.2s ease;
+}
+
+/* Section transitions */
+.section-enter {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-enter.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile menu animation */
+.mobile-menu {
+  transition: transform 0.3s ease;
+  transform: translateX(100%);
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
