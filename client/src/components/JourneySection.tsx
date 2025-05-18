@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import Favicon from "@/components/Favicon";
+import Favicon from "@/components/ui/Favicon";
 
 interface Organization {
   name: string;
@@ -9,28 +9,28 @@ interface Organization {
 }
 
 const JourneySection = () => {
-  // const [bcitFavicon, setBcitFavicon] = useState<string | null>(null);
-  // const [stratfordFavicon, setStratfordFavicon] = useState<string | null>(null);
-  // // test delete later
-  // const [googleFavicon, setGoogleFavicon] = useState<string | null>(null);
+  const [bcitFavicon, setBcitFavicon] = useState<string | null>(null);
+  const [stratfordFavicon, setStratfordFavicon] = useState<string | null>(null);
+  // test delete later
+  const [googleFavicon, setGoogleFavicon] = useState<string | null>(null);
   
-  // useEffect(() => {
-  //   // Attempt to fetch favicons
-  //   const fetchFavicon = async (url: string, setter: (url: string | null) => void) => {
-  //     try {
-  //       // Use Google's favicon service as a fallback
-  //       const faviconUrl = `https://www.google.com/s2/favicons?domain=${url}&sz=32`;
-  //       setter(faviconUrl);
-  //     } catch (error) {
-  //       console.error("Error fetching favicon:", error);
-  //       setter(null);
-  //     }
-  //   };
+  useEffect(() => {
+    // Attempt to fetch favicons
+    const fetchFavicon = async (url: string, setter: (url: string | null) => void) => {
+      try {
+        // Use Google's favicon service as a fallback
+        const faviconUrl = `https://www.google.com/s2/favicons?domain=${url}&sz=32`;
+        setter(faviconUrl);
+      } catch (error) {
+        console.error("Error fetching favicon:", error);
+        setter(null);
+      }
+    };
     
-  //   fetchFavicon("https://www.bcit.ca", setBcitFavicon);
-  //   fetchFavicon("https://www.stratfordhall.ca", setStratfordFavicon);
-  //   fetchFavicon("https://www.google.com", setGoogleFavicon);
-  // }, []);
+    fetchFavicon("https://www.bcit.ca", setBcitFavicon);
+    fetchFavicon("https://www.stratfordhall.ca", setStratfordFavicon);
+    fetchFavicon("https://www.google.com", setGoogleFavicon);
+  }, []);
 
   return (
     <section id="journey" className="py-20 bg-muted/30">
@@ -107,29 +107,17 @@ const JourneySection = () => {
             <div className="md:grid md:grid-cols-[200px_1fr] gap-8 md:pl-16">
               <div className="mb-4 md:mb-0 flex flex-col">
                 <h3 className="text-xl font-semibold">Computer Information Technology Diploma</h3>
-                {/* <div className="flex items-center gap-2 mt-1">
+                <div className="flex items-center gap-2 mt-1">
                   {bcitFavicon && (
                     <img 
                       src={bcitFavicon} 
                       alt="BCIT logo" 
                       className="w-4 h-4 object-contain"
                     />
-                  )} */}
-
-                  {/* <a 
+                  )}
+                  <a 
                     href="https://www.bcit.ca/programs/computer-information-technology-diploma-full-time-5540dipma/" 
                     target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-primary font-medium hover:underline"
-                  >
-                    British Columbia Institute of Technology
-                  </a>
-                </div> */}
-                <div className="flex items-center gap-2 mt-1">
-                  <Favicon domain="bcit.ca" alt="BCIT logo" />
-                  <a
-                    href="https://www.bcit.ca/programs/computer-information-technology-diploma-full-time-5540dipma/"
-                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary font-medium hover:underline"
                   >
