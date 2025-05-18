@@ -95,7 +95,7 @@ function App() {
             transition={{ duration: 0.3 }}
           >
             <p className="font-medium">✨ Fun Fact: My favorite Pokemon is Dragonite! ✨</p>
-            <p className="text-xs text-muted-foreground mt-1">Triple-click anywhere to reveal more fun facts</p>
+            <p className="text-xs text-muted-foreground mt-1">You found the fun fact by triple-clicking</p>
           </motion.div>
         )}
       </AnimatePresence>
