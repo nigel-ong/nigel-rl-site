@@ -165,7 +165,7 @@ const JourneySection = () => {
                 <h3 className="text-xl font-semibold">Cool job title</h3>
                 <div className="flex items-center gap-2 mt-1">
                 {/* test delete */}
-                {bcitFavicon && (
+                {googleFavicon && (
                     <img 
                       src={googleFavicon} 
                       alt="BCIT logo" 
