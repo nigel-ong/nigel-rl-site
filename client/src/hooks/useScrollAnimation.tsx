@@ -29,9 +29,10 @@ export function useScrollAnimation({
   useEffect(() => {
     // 1. Set up smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(this: HTMLAnchorElement, e: MouseEvent) {
+      anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        const targetId = this.getAttribute('href')?.substring(1);
+        const element = this as HTMLAnchorElement;
+        const targetId = element.getAttribute('href')?.substring(1);
         if (!targetId) return;
         
         const targetElement = document.getElementById(targetId);
@@ -50,9 +51,10 @@ export function useScrollAnimation({
     
     // 2. Add click handlers to buttons that scroll to sections
     document.querySelectorAll('[data-scroll-to]').forEach(button => {
-      button.addEventListener('click', function(this: Element, e: MouseEvent) {
+      button.addEventListener('click', function(e) {
         e.preventDefault();
-        const targetId = this.getAttribute('data-scroll-to');
+        const element = this as HTMLElement;
+        const targetId = element.getAttribute('data-scroll-to');
         if (!targetId) return;
         
         const targetElement = document.getElementById(targetId);
