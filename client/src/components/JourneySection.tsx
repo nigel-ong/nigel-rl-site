@@ -131,8 +131,7 @@ const JourneySection = () => {
               >
                 <div className="grid md:grid-cols-2 gap-4 items-start">
                   <img
-                    src=""
-                    // src="https://pixabay.com/get/gef52cd873e4315992c735f4269b5550b92aa15ffeeb4d6f5a2d5a4212d986772bcc2f348e0b548023e763f18d926fc6c4042b2b57bf3d94654781823019c078b_1280.jpg"
+                    src="https://www.bcit.ca/wp-content/uploads/2020/07/BCIT-DT-18-scaled.jpg"
                     alt="BCIT Campus"
                     className="w-full h-auto rounded-lg shadow-md"
                     loading="lazy"
