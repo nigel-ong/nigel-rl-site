@@ -7,6 +7,7 @@ import {
   FaTools, 
   FaHeadset, 
   FaCode,
+  FaTicketAlt,
   FaInfoCircle 
 } from "react-icons/fa";
 import { useTheme } from "@/components/ThemeProvider";
@@ -79,7 +80,7 @@ const SkillsSection = () => {
     },
     {
       category: "ITSM & Ticketing",
-      icon: <FaHeadset className="text-2xl text-primary mr-3" />,
+      icon: <FaTicketAlt className="text-2xl text-primary mr-3" />,
       items: [
         { name: "SharePoint", details: "Document management and workspace setup" },
         { name: "Documentation", details: "Process creation and knowledge base management" },
@@ -89,22 +90,11 @@ const SkillsSection = () => {
       color: "primary"
     },
     {
-      category: "Hobbies - Testing",
-      icon: <FaHeadset className="text-2xl text-primary mr-3" />,
-      items: [
-        { name: "Yugioh", details: "cardgames" },
-        { name: "Sleeping", details: "8 hours" },
-        { name: "Crying", details: "4 hours" },
-        { name: "Walking", details: "Endless" }
-      ],
-      color: "primary"
-    },
-    {
       category: "Programming Languages",
       icon: <FaCode className="text-2xl text-secondary mr-3" />,
       items: [
-        { name: "JavaScript", details: "React, Node.js, and modern ES6+ features" },
-        { name: "Python", details: "Automation, scripting, and data processing" },
+        { name: "Python", details: "Scripting, and data processing" },
+        { name: "JavaScript", details: "Node.js, and modern ES6+ features" },
         { name: "HTML/CSS", details: "Responsive design and modern frameworks" },
         { name: "SQL", details: "Database design, queries, and optimization" }
       ],
