@@ -48,7 +48,7 @@ const HeroSection = () => {
                 I thrive in environments where I can keep learning, contribute meaningfully, and work alongside people who care about doing things right. I've supported environments with 600+ users, managed everything from user management to delivering tech events and live streams.
               </p>
               <p>
-                Whether I'm resolving a technical issue or helping someone feel more confident using their tools, my focus is always on providing thoughtful, reliable support — the kind of support I'd want to receive. I'm looking to grow with a team that values curiosity, communication, and the power of well-run systems.
+                Whether I'm resolving a technical issue or helping someone feel more confident using their tools, my focus is always on providing thoughtful, reliable support. I'm looking to grow with a team that values curiosity, communication, and the power of well-run systems.
               </p>
             </motion.div>
             <motion.div 
