@@ -27,6 +27,7 @@ const JourneySection = () => {
     fetchFavicon("https://www.bcit.ca", setBcitFavicon);
     fetchFavicon("https://www.stratfordhall.ca", setStratfordFavicon);
   }, []);
+
   return (
     <section id="journey" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -72,8 +73,9 @@ const JourneySection = () => {
                 </div>
                 <p className="text-sm text-muted-foreground mt-1">JAN 2024 - AUG 2024</p>
               </div>
+              {/* Journey content card with hover animation and dark mode glow effect */}
               <motion.div 
-                className="p-6 bg-primary/5 rounded-lg"
+                className="p-6 bg-primary/5 rounded-lg hoverable-content"
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
@@ -121,8 +123,9 @@ const JourneySection = () => {
                 <p className="text-sm text-muted-foreground mt-1">2022 - 2024</p>
                 <p className="font-medium mt-1">GPA: 90%</p>
               </div>
+              {/* Journey content card with hover animation and dark mode glow effect */}
               <motion.div 
-                className="p-6 bg-primary/5 rounded-lg"
+                className="p-6 bg-primary/5 rounded-lg hoverable-content"
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >

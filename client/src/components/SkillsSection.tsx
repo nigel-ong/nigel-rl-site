@@ -66,6 +66,7 @@ const SkillsSection = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 section-enter">
           {skills.map((skill, index) => (
+            // Skill card with shine effect - the shine effect is defined in CSS using .skill-card
             <motion.div 
               key={index}
               className="bg-card text-card-foreground p-6 rounded-xl shadow-lg skill-card hoverable-card"
@@ -73,7 +74,7 @@ const SkillsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ scale: 1.02 }} /* Subtle scale animation on hover */
+              whileHover={{ scale: 1.02 }}
             >
               <div className="flex items-center mb-4">
                 {skill.icon}

@@ -174,7 +174,7 @@ To add or update images:
    - Direct imports: `import myImage from '@/assets/image.jpg'`
    - Or with path: `src="/src/assets/image.jpg"`
 
-## 🎨 How to Customize Colors
+## 🎨 How to Customize Colors & Visual Effects
 
 The site uses TailwindCSS with custom colors. To update the color scheme:
 
@@ -193,9 +193,89 @@ For example, to change the primary color in light mode:
 }
 ```
 
-To change cursor spotlight and other gradients:
-1. Find the relevant section in `client/src/index.css` (search for ".cursor-spotlight")
-2. Modify the radial-gradient values to use your preferred colors
+### 🔧 Customizing Visual Effects
+
+#### Mouse Cursor Spotlight
+The site features a subtle cursor spotlight effect that follows your mouse cursor:
+
+1. To adjust size and intensity:
+   ```css
+   .cursor-spotlight {
+     width: 120px; /* Adjust size here (larger = bigger spotlight) */
+     height: 120px; /* Keep equal to width for a circular shape */
+     /* ... other properties ... */
+   }
+   ```
+
+2. To change colors and opacity:
+   ```css
+   .dark .cursor-spotlight {
+     background: radial-gradient(
+       circle, 
+       rgba(183, 211, 233, 0.15) 0%, /* Primary color - increase last value for stronger effect */
+       rgba(241, 210, 231, 0.08) 50%, /* Secondary color */
+       rgba(0, 0, 0, 0) 100% /* Transparent edge */
+     );
+   }
+   ```
+
+3. To disable the effect completely, comment out or remove the `CursorSpotlight` component in `App.tsx`
+
+#### Profile Photo Hover Animation
+The profile photo has a subtle scale and glow effect on hover:
+
+1. To adjust the animation timing and scale:
+   ```jsx
+   <motion.div 
+     whileHover={{ 
+       scale: 1.03, // Adjust scale factor here (1.03 = 3% larger)
+       boxShadow: "0 0 20px rgba(183, 211, 233, 0.5)" // Adjust glow intensity 
+     }}
+     transition={{ 
+       type: "spring", 
+       stiffness: 300, // Higher = faster animation
+       damping: 15 // Lower = more bouncy
+     }}
+   >
+   ```
+
+#### Skills Cards Shine Effect
+The skills cards have a diagonal shine/shimmer effect on hover:
+
+1. To adjust the animation speed:
+   ```css
+   .skill-card:hover::before {
+     animation: shine 1.5s ease; /* Change 1.5s to desired duration */
+   }
+   ```
+
+2. To change the angle of the shine effect:
+   ```css
+   .skill-card::before {
+     /* ... other properties ... */
+     background: linear-gradient(
+       120deg, /* Change this angle (120deg) to adjust the diagonal direction */
+       transparent 0%,
+       rgba(255, 255, 255, 0) 30%,
+       rgba(255, 255, 255, 0.2) 50%, /* Increase 0.2 for stronger shine */
+       rgba(255, 255, 255, 0) 70%,
+       transparent 100%
+     );
+   }
+   ```
+
+#### Dark Mode Hover Effects
+In dark mode, hoverable elements have a subtle glow using the secondary brand color:
+
+1. To adjust the glow intensity or color:
+   ```css
+   .dark .hoverable-card:hover,
+   .dark .timeline-item:hover .hoverable-content,
+   .dark .skill-card:hover {
+     box-shadow: 0 0 15px rgba(241, 210, 231, 0.25); /* Last value (0.25) controls opacity */
+     /* ... other properties ... */
+   }
+   ```
 
 ## ⚙️ How the Site Works (Explained Simply)
 
