@@ -37,8 +37,8 @@ const SkillsSection = () => {
       category: "Operating Systems",
       icon: <FaLaptop className="text-2xl text-primary mr-3" />,
       items: [
-        { name: "macOS", details: "Daily driver for development, 5+ years experience" },
-        { name: "Windows", details: "Administration, troubleshooting, and support for 100+ users" },
+        { name: "Windows", details: "Administration, Daily driver for development, 5+ years experience " },
+        { name: "macOS", details: "Experience troubleshooting, and support for 100+ users" },
         { name: "Linux", details: "Server administration and command line proficiency" },
         { name: "iOS", details: "Mobile device management and app deployment" }
       ],
@@ -59,9 +59,9 @@ const SkillsSection = () => {
       category: "Admin Tools",
       icon: <FaUserCog className="text-2xl text-primary mr-3" />,
       items: [
+        { name: "Active Directory", details: "User and group management, GPO" },
         { name: "Google Admin", details: "Workspace user management and security" },
         { name: "Mosyle", details: "MDM for Apple devices, policy and profile management" },
-        { name: "Active Directory", details: "User and group management, GPO" },
         { name: "MDM Solutions", details: "Mobile device enrollment and security" }
       ],
       color: "primary"
@@ -70,7 +70,7 @@ const SkillsSection = () => {
       category: "Applications",
       icon: <FaTools className="text-2xl text-secondary mr-3" />,
       items: [
-        { name: "MS Office", details: "Advanced Excel, Word, PowerPoint, and Teams" },
+        { name: "MS Office", details: "Word, Excel, PowerPoint, and Teams" },
         { name: "Google Workspace", details: "Admin, training, and power user" },
         { name: "Meraki", details: "Network configuration and monitoring" },
         { name: "VoIP Systems", details: "3CX setup and management" },
@@ -85,6 +85,17 @@ const SkillsSection = () => {
         { name: "Documentation", details: "Process creation and knowledge base management" },
         { name: "Asset Management", details: "Inventory tracking and lifecycle" },
         { name: "Lifecycle Management", details: "Hardware refresh planning and execution" }
+      ],
+      color: "primary"
+    },
+    {
+      category: "Hobbies - Testing",
+      icon: <FaHeadset className="text-2xl text-primary mr-3" />,
+      items: [
+        { name: "Yugioh", details: "cardgames" },
+        { name: "Sleeping", details: "8 hours" },
+        { name: "Crying", details: "4 hours" },
+        { name: "Walking", details: "Endless" }
       ],
       color: "primary"
     },
