@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import headshot from "@/assets/headshot.jpg"; // ✅ Correct image import
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -98,7 +99,7 @@ const HeroSection = () => {
               }}
             >
               <img 
-                src="/src/assets/headshot.jpg" 
+                src={headshot}
                 alt="Nigel Ong" 
                 className="w-full h-full object-cover"
                 loading="lazy"
