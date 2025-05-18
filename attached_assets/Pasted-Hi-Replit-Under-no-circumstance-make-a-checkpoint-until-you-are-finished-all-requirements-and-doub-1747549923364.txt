@@ -1,0 +1,54 @@
+Hi Replit, Under no circumstance, make a checkpoint until you are finished all requirements and double checked each update works from the prompts! Please implement the following visual and interaction enhancements. Once they’re applied, **add clear, inline comments and update the README section** explaining **how to adjust these features manually** for future updates.
+
+---
+
+## 🖼️ Main Profile Photo – Hover Animation
+
+- Add a **hover animation** to the **main profile photo**:
+    - Subtle **scale-up**, **glow**, or soft **transition effect**.
+    - The effect should be smooth and professional.
+- ✅ After implementing:
+    - Add comments or documentation showing **how to adjust** the animation timing, easing, or scale factor.
+
+---
+
+## 🌘 Dark Mode – Hover Shadows
+
+- For all hoverable elements with animations, in **dark mode**:
+    - Add a **soft shadow or glow** effect using the **secondary brand color**: `#F1D2E7`.
+    - This helps differentiate interactivity visually without being overpowering.
+- ✅ After implementing:
+    - Document where the shadow color/style is defined (e.g., Tailwind class, custom CSS, or component style).
+    - Explain **how to change the color, blur radius, or opacity** if needed.
+
+---
+
+## ⚙️ Technical Skills Cards – Shine Effect
+
+- When a user **hovers over a technical skill card**, add a **quick, subtle shine effect**:
+    - For example: a diagonal shimmer or gradient swipe using `@keyframes`, `clip-path`, or `::before` pseudo-elements.
+    - The effect should reset cleanly and look good in both light and dark mode.
+- ✅ After implementing:
+    - Include instructions or comments on how to change the direction, speed, or style of the shine effect.
+
+---
+
+## 🧭 Spotlight Cursor Tracker – Adjustment
+
+- The current cursor spotlight is still **offset to the bottom right**.
+- Please update the effect so the **spotlight is centered directly under the mouse cursor**.
+    - If using CSS or JS-based coordinates (`event.clientX`, `event.clientY`), ensure proper translation.
+- ✅ After fixing:
+    - Add a short note explaining:
+        - How the effect works
+        - Where the spotlight size, blur, and position offset can be adjusted
+        - How to disable or style it further if needed
+
+---
+
+📚 Please ensure all new features are:
+
+- **Commented inline**
+- Included in a `README.md` section titled `🔧 Customizing Visual Effects`
+
+This will help future updates be accessible and editable, even for beginners. Thank you!

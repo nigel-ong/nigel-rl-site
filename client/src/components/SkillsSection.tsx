@@ -68,11 +68,12 @@ const SkillsSection = () => {
           {skills.map((skill, index) => (
             <motion.div 
               key={index}
-              className="bg-card text-card-foreground p-6 rounded-xl shadow-lg"
+              className="bg-card text-card-foreground p-6 rounded-xl shadow-lg skill-card hoverable-card"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ scale: 1.02 }} /* Subtle scale animation on hover */
             >
               <div className="flex items-center mb-4">
                 {skill.icon}

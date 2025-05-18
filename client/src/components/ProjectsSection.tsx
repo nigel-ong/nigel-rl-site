@@ -25,15 +25,17 @@ const ProjectsSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8 section-enter">
           {/* Project 1: MemoRizz */}
+          {/* Project card with hover effects - Add hoverable-card class for consistent styling */}
           <motion.div
-            className="bg-card text-card-foreground rounded-xl shadow-lg overflow-hidden"
+            className="bg-card text-card-foreground rounded-xl shadow-lg overflow-hidden hoverable-card"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
             whileHover={{ 
-              scale: 1.03,
+              scale: 1.03, // Adjust scale factor to change hover size
               boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+              // Dark mode glow effect is applied via .dark .hoverable-card:hover in CSS
             }}
           >
             <div className="relative">
@@ -80,15 +82,17 @@ const ProjectsSection = () => {
           </motion.div>
 
           {/* Project 2: Pose IT */}
+          {/* Project card with hover effects and consistent styling */}
           <motion.div
-            className="bg-card text-card-foreground rounded-xl shadow-lg overflow-hidden"
+            className="bg-card text-card-foreground rounded-xl shadow-lg overflow-hidden hoverable-card"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
             whileHover={{ 
-              scale: 1.03,
+              scale: 1.03, // Adjust scale factor to change hover size
               boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+              // Dark mode glow effect is applied via .dark .hoverable-card:hover in CSS
             }}
           >
             <div className="relative">

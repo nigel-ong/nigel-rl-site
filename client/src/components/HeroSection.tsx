@@ -82,15 +82,33 @@ const HeroSection = () => {
             variants={fadeIn}
             custom={0}
           >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-md overflow-hidden border-2 border-primary/60 shadow-lg">
+            {/* Profile photo with hover animation - adjust the scale value, transitionDuration, or shadow intensity as needed */}
+            <motion.div 
+              className="relative w-64 h-64 md:w-80 md:h-80 rounded-md overflow-hidden border-2 border-primary/60 shadow-lg"
+              whileHover={{ 
+                scale: 1.03, // Adjust scale factor here (1.03 = 3% larger)
+                boxShadow: "0 0 20px rgba(183, 211, 233, 0.5)" // Adjust glow color and intensity here
+              }}
+              transition={{ 
+                type: "spring", 
+                stiffness: 300, 
+                damping: 15 
+                // Adjust stiffness/damping for different animation feel
+                // Higher stiffness = faster, Higher damping = less bouncy
+              }}
+            >
               <img 
                 src="/src/assets/BCIT_DT-201-samsung.jpg" 
                 alt="Nigel Ong" 
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 rounded-md bg-gradient-to-tr from-primary/20 to-secondary/20"></div>
-            </div>
+              <motion.div 
+                className="absolute inset-0 rounded-md bg-gradient-to-tr from-primary/20 to-secondary/20"
+                whileHover={{ opacity: 0.7 }} // Increase gradient opacity on hover
+                transition={{ duration: 0.3 }}
+              ></motion.div>
+            </motion.div>
           </motion.div>
         </div>
       </div>

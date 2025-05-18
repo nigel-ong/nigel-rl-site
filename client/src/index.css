@@ -101,25 +101,110 @@
   }
 }
 
-/* Cursor spotlight effect */
+/* Cursor spotlight effect - Fully centered under the mouse cursor
+ * The spotlight follows the mouse with these parameters:
+ * - Size: Controlled by width/height (120px)
+ * - Position: Centered using transform: translate(-50%, -50%)
+ * - Colors: Different gradients for dark/light mode
+ * - Intensity: Adjust the alpha values in rgba() to change intensity
+ */
 .cursor-spotlight {
   position: fixed;
-  width: 120px;
-  height: 120px;
+  width: 120px; /* Adjust size here */
+  height: 120px; /* Keep equal to width for circular shape */
   border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: -1;
+  transform: translate(-50%, -50%); /* Centers the spotlight exactly on cursor */
+  pointer-events: none; /* Prevents the spotlight from interfering with clicks */
+  z-index: -1; /* Keeps spotlight behind content */
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; /* Controls fade in/out speed */
 }
 
+/* Dark mode gradient - Adjust colors and opacity as needed */
 .dark .cursor-spotlight {
-  background: radial-gradient(circle, rgba(183, 211, 233, 0.15) 0%, rgba(241, 210, 231, 0.08) 50%, rgba(0, 0, 0, 0) 100%);
+  background: radial-gradient(
+    circle, 
+    rgba(183, 211, 233, 0.15) 0%, /* Primary color - increase opacity for stronger effect */
+    rgba(241, 210, 231, 0.08) 50%, /* Secondary color */
+    rgba(0, 0, 0, 0) 100% /* Transparent edge */
+  );
 }
 
+/* Light mode gradient - Adjust colors and opacity as needed */
 .light .cursor-spotlight {
-  background: radial-gradient(circle, rgba(86, 122, 206, 0.15) 0%, rgba(241, 210, 231, 0.08) 50%, rgba(255, 255, 255, 0) 100%);
+  background: radial-gradient(
+    circle, 
+    rgba(86, 122, 206, 0.15) 0%, /* Light mode primary color */
+    rgba(241, 210, 231, 0.08) 50%, /* Secondary color */
+    rgba(255, 255, 255, 0) 100% /* Transparent edge */
+  );
+}
+
+/* Dark mode hover effects - Adds subtle glow using secondary brand color */
+.dark .hoverable-card:hover,
+.dark .timeline-item:hover .hoverable-content,
+.dark .skill-card:hover {
+  box-shadow: 0 0 15px rgba(241, 210, 231, 0.25); /* #F1D2E7 with 25% opacity */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  /* Adjust rgba values to change color intensity:
+   * - First 3 numbers are RGB values for #F1D2E7 (secondary color)
+   * - Last number is opacity (0.0-1.0), higher = more intense glow
+   */
+}
+
+/* 
+ * Shine effect animation for skill cards 
+ * How to customize:
+ * - Change animation duration by editing the 'animation' property (default: 1.5s)
+ * - Adjust shine angle by changing the 'background' linear-gradient angle (default: 120deg)
+ * - Modify shine width by changing the gradient's color-stop percentages
+ * - Adjust colors by changing rgba values (both light and dark mode versions provided)
+ */
+.skill-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 70%,
+    transparent 100%
+  );
+  transition: left 0.2s ease;
+}
+
+.dark .skill-card::before {
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(241, 210, 231, 0) 30%,
+    rgba(241, 210, 231, 0.2) 50%, /* Uses secondary color with 20% opacity */
+    rgba(241, 210, 231, 0) 70%,
+    transparent 100%
+  );
+}
+
+.skill-card:hover::before {
+  animation: shine 1.5s ease; /* Adjust duration here (1.5s = 1.5 seconds) */
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 /* Progress bar */
