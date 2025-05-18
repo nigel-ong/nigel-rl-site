@@ -10,6 +10,8 @@ interface Organization {
 const JourneySection = () => {
   const [bcitFavicon, setBcitFavicon] = useState<string | null>(null);
   const [stratfordFavicon, setStratfordFavicon] = useState<string | null>(null);
+  // test delete later
+  const [googleFavicon, setGoogleFavicon] = useState<string | null>(null);
   
   useEffect(() => {
     // Attempt to fetch favicons
@@ -129,7 +131,7 @@ const JourneySection = () => {
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                {/* to have it 1 large string */}
+                {/* to have it 1 long string */}
                 {/* <div className="grid gap-4 items-start"> */}
 
                 {/* to have it 2 columns (image + text)  */}
@@ -148,6 +150,53 @@ const JourneySection = () => {
               </motion.div>
             </div>
           </motion.div>
+
+          {/* test delete*/}
+          <motion.div
+            className="timeline-item mt-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="timeline-dot"></div>
+            <div className="md:grid md:grid-cols-[200px_1fr] gap-8 md:pl-16">
+              <div className="mb-4 md:mb-0 flex flex-col">
+                <h3 className="text-xl font-semibold">Cool job title</h3>
+                <div className="flex items-center gap-2 mt-1">
+                {/* test delete */}
+                {bcitFavicon && (
+                    <img 
+                      src={googleFavicon} 
+                      alt="BCIT logo" 
+                      className="w-4 h-4 object-contain"
+                    />
+                  )}
+                  {/* end of test delete  */}
+                  <a 
+                    href="https://google.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary font-medium hover:underline"
+                  >
+                    Company Name
+                  </a>
+                </div>
+                <p className="text-sm text-muted-foreground mt-1"> JAN 1991 - FEB 2001/p>
+              </div>
+              <motion.div 
+                className="p-6 bg-primary/5 rounded-lg"
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                <ul className="space-y-2 list-disc ml-5 text-sm md:text-base">
+                  <li>Wasnt born yet</li>
+                  <li>Sick top deck</li>
+                </ul>
+              </motion.div>
+            </div>
+          </motion.div>
+          {/* end of test delete*/}
         </div>
       </div>
     </section>
