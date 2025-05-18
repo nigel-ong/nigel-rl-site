@@ -130,12 +130,12 @@ const JourneySection = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <div className="grid md:grid-cols-2 gap-4 items-start">
-                  <img
+                  {/* <img
                     src="https://www.bcit.ca/wp-content/uploads/2020/07/BCIT-DT-18-scaled.jpg"
                     alt="BCIT Campus"
                     className="w-full h-auto rounded-lg shadow-md"
                     loading="lazy"
-                  />
+                  /> */}
                   <div>
                     <p>Completed comprehensive training in system administration, networking, security, and software development with a focus on practical applications.</p>
                   </div>

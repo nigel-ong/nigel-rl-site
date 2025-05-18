@@ -88,8 +88,7 @@ function App() {
       <AnimatePresence>
         {showEasterEgg && (
           <motion.div 
-            // className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 p-4 bg-card border shadow-lg rounded-lg max-w-md text-center"
-            className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 w-[90vw] max-w-md p-4 bg-card border shadow-lg rounded-lg text-center"
+            className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 p-4 bg-card border shadow-lg rounded-lg max-w-md text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
