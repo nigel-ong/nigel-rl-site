@@ -8,7 +8,7 @@ const Footer = () => {
           &copy; {currentYear} Nigel Ong. All rights reserved.
         </p>
         <p className="text-sm text-muted-foreground/70 mt-2">
-          Designed with ❤️ using modern web technologies
+          Designed using modern web technologies
         </p>
       </div>
     </footer>
