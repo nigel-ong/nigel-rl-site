@@ -182,7 +182,7 @@ const JourneySection = () => {
                     Company Name
                   </a>
                 </div>
-                <p className="text-sm text-muted-foreground mt-1"> JAN 1991 - FEB 2001/p>
+                <p className="text-sm text-muted-foreground mt-1"> JAN 1991 - FEB 2001 </p>
               </div>
               <motion.div 
                 className="p-6 bg-primary/5 rounded-lg"
