@@ -55,6 +55,65 @@
   body {
     font-family: 'DM Sans', sans-serif;
     @apply antialiased bg-background text-foreground;
+    position: relative;
+  }
+
+  /* 
+   * Animated subtle background for visual depth
+   * 
+   * How to customize:
+   * - Adjust the opacity by changing rgba values (last parameter)
+   * - Modify animation speed by changing animation-duration (default: 20s)
+   * - Change the pattern size by adjusting the background-size values
+   * - Use different gradients for different effects
+   */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background-size: 400% 400%;
+    animation: gradientAnimation 20s ease infinite;
+    pointer-events: none;
+  }
+
+  .light body::before {
+    background: radial-gradient(
+      circle at 0% 0%,
+      rgba(86, 122, 206, 0.03) 0%,
+      transparent 50%
+    ), radial-gradient(
+      circle at 100% 100%,
+      rgba(241, 210, 231, 0.03) 0%,
+      transparent 50%
+    );
+  }
+
+  .dark body::before {
+    background: radial-gradient(
+      circle at 0% 0%,
+      rgba(183, 211, 233, 0.03) 0%,
+      transparent 50%
+    ), radial-gradient(
+      circle at 100% 100%,
+      rgba(241, 210, 231, 0.03) 0%,
+      transparent 50%
+    );
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
   }
 }
 
@@ -140,16 +199,33 @@
   );
 }
 
-/* Dark mode hover effects - Adds subtle glow using secondary brand color */
+/* 
+ * Hover effects for cards and interactive elements
+ * Applied in both light and dark modes, with theme-specific colors
+ * 
+ * How to customize:
+ * - Change shadow size by adjusting the '0 0 15px' values (horizontal-offset vertical-offset blur)
+ * - Adjust intensity by changing the opacity value in rgba (the last number, 0.25 or 0.20)
+ * - Change colors by modifying the RGB values
+ *   Dark mode: rgba(241, 210, 231, 0.25) = #F1D2E7 (pink secondary color)
+ *   Light mode: rgba(86, 122, 206, 0.20) = #567ACE (blue primary color)
+ * - All interactive elements should use these classes: hoverable-card, hoverable-content, or skill-card
+ */
+
+/* Dark mode hover effects - Pink glow (#F1D2E7) */
 .dark .hoverable-card:hover,
 .dark .timeline-item:hover .hoverable-content,
 .dark .skill-card:hover {
   box-shadow: 0 0 15px rgba(241, 210, 231, 0.25); /* #F1D2E7 with 25% opacity */
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-  /* Adjust rgba values to change color intensity:
-   * - First 3 numbers are RGB values for #F1D2E7 (secondary color)
-   * - Last number is opacity (0.0-1.0), higher = more intense glow
-   */
+}
+
+/* Light mode hover effects - Blue glow (#567ACE) */
+.light .hoverable-card:hover,
+.light .timeline-item:hover .hoverable-content,
+.light .skill-card:hover {
+  box-shadow: 0 0 15px rgba(86, 122, 206, 0.20); /* #567ACE with 20% opacity */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 /* 
