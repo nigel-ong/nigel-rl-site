@@ -11,8 +11,8 @@ interface Organization {
 const JourneySection = () => {
   const [bcitFavicon, setBcitFavicon] = useState<string | null>(null);
   const [stratfordFavicon, setStratfordFavicon] = useState<string | null>(null);
-  // test delete later
-  const [googleFavicon, setGoogleFavicon] = useState<string | null>(null);
+  // test favicon creation delete later
+  // const [googleFavicon, setGoogleFavicon] = useState<string | null>(null);
   
   useEffect(() => {
     // Attempt to fetch favicons
@@ -29,7 +29,7 @@ const JourneySection = () => {
     
     fetchFavicon("https://www.bcit.ca", setBcitFavicon);
     fetchFavicon("https://www.stratfordhall.ca", setStratfordFavicon);
-    fetchFavicon("https://www.google.com", setGoogleFavicon);
+    // fetchFavicon("https://www.google.com", setGoogleFavicon);
   }, []);
 
   return (
@@ -153,8 +153,8 @@ const JourneySection = () => {
             </div>
           </motion.div>
 
-          {/* test delete*/}
-          <motion.div
+          {/* test entry delete*/}
+          {/* <motion.div
             className="timeline-item mt-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -166,7 +166,7 @@ const JourneySection = () => {
               <div className="mb-4 md:mb-0 flex flex-col">
                 <h3 className="text-xl font-semibold">Cool job title</h3>
                 <div className="flex items-center gap-2 mt-1">
-                {/* test delete */}
+
                 {googleFavicon && (
                     <img 
                       src={googleFavicon} 
@@ -174,7 +174,7 @@ const JourneySection = () => {
                       className="w-4 h-4 object-contain"
                     />
                   )}
-                  {/* end of test delete  */}
+
                   <a 
                     href="https://google.com/" 
                     target="_blank" 
@@ -197,8 +197,8 @@ const JourneySection = () => {
                 </ul>
               </motion.div>
             </div>
-          </motion.div>
-          {/* end of test delete*/}
+          </motion.div> */}
+          {/* end of test entry delete*/}
         </div>
       </div>
     </section>
