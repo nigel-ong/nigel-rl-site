@@ -74,7 +74,6 @@ const SkillsSection = () => {
         { name: "Google Workspace", details: "Admin, training, and power user" },
         { name: "Meraki", details: "Network configuration and monitoring" },
         { name: "VoIP Systems", details: "3CX setup and management" },
-        { name: "test", details: "3CX setup and management" }
       ],
       color: "secondary"
     },
