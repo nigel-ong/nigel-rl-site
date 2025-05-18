@@ -115,21 +115,21 @@ const JourneySection = () => {
                       className="w-4 h-4 object-contain"
                     />
                   )} */}
-                  <div className="flex items-center gap-2 mt-1">
-                    <Favicon domain="bcit.ca" alt="BCIT logo" />
-                    <a
-                      href="https://www.bcit.ca/programs/computer-information-technology-diploma-full-time-5540dipma/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary font-medium hover:underline"
-                    >
-                      British Columbia Institute of Technology
-                    </a>
-                  </div>
 
-                  <a 
+                  {/* <a 
                     href="https://www.bcit.ca/programs/computer-information-technology-diploma-full-time-5540dipma/" 
                     target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary font-medium hover:underline"
+                  >
+                    British Columbia Institute of Technology
+                  </a>
+                </div> */}
+                <div className="flex items-center gap-2 mt-1">
+                  <Favicon domain="bcit.ca" alt="BCIT logo" />
+                  <a
+                    href="https://www.bcit.ca/programs/computer-information-technology-diploma-full-time-5540dipma/"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary font-medium hover:underline"
                   >
