@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import Favicon from "@/components/ui/Favicon";
+import Favicon from "@/components/Favicon";
 
 interface Organization {
   name: string;
