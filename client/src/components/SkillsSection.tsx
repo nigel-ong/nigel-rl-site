@@ -195,8 +195,8 @@ const SkillsSection = () => {
                       {/* Tooltip with skill details */}
                       {item.details && activeTooltip === tooltipId && (
                         <motion.div 
-                          // className="absolute z-50 left-full ml-4 -top-2 w-48 p-2 bg-card rounded-md border shadow-md text-xs"
-                          className="absolute z-50 bottom-full mb-2 left-1/2 -translate-x-1/2 w-56 p-2 bg-card rounded-md border shadow-md text-xs"
+                          // className="absolute z-50 bottom-full mb-2 left-1/2 -translate-x-1/2 w-56 p-2 bg-card rounded-md border shadow-md text-xs"
+                          className="absolute z-50 bottom-full mb-2 left-1/2 -translate-x-1/2 w-max max-w-[80vw] p-2 bg-card rounded-md border shadow-md text-xs break-words text-center"
                           initial={{ opacity: 0, x: -5 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.2 }}
