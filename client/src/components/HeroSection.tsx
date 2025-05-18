@@ -98,7 +98,7 @@ const HeroSection = () => {
               }}
             >
               <img 
-                src="/src/assets/BCIT_DT-201-samsung.jpg" 
+                src="import myImage from '@/assets/headshot.jpg" 
                 alt="Nigel Ong" 
                 className="w-full h-full object-cover"
                 loading="lazy"
