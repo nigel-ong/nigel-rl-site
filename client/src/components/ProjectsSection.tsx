@@ -58,7 +58,7 @@ const ProjectsSection = () => {
                 <span className="bg-muted px-3 py-1 rounded-full text-xs">JavaScript</span>
                 <span className="bg-muted px-3 py-1 rounded-full text-xs">Node.js</span>
                 <span className="bg-muted px-3 py-1 rounded-full text-xs">Express</span>
-                <span className="bg-muted px-3 py-1 rounded-full text-xs">MongoDB</span>
+                <span className="bg-muted px-3 py-1 rounded-full text-xs">BCrypt</span>
               </div>
               <div className="flex space-x-3">
                 <a
@@ -121,8 +121,8 @@ const ProjectsSection = () => {
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="bg-muted px-3 py-1 rounded-full text-xs">XR</span>
-                <span className="bg-muted px-3 py-1 rounded-full text-xs">Unity</span>
-                <span className="bg-muted px-3 py-1 rounded-full text-xs">C#</span>
+                <span className="bg-muted px-3 py-1 rounded-full text-xs">JavaScript</span>
+                <span className="bg-muted px-3 py-1 rounded-full text-xs">HTML</span>
                 <span className="bg-muted px-3 py-1 rounded-full text-xs">ReachXR</span>
               </div>
               <div className="flex space-x-3">
