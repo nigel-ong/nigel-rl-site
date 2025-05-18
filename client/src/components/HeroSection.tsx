@@ -98,7 +98,7 @@ const HeroSection = () => {
               }}
             >
               <img 
-                src="import myImage from '@/assets/headshot.jpg" 
+                import myImage from '@/assets/headshot.jpg' 
                 alt="Nigel Ong" 
                 className="w-full h-full object-cover"
                 loading="lazy"
