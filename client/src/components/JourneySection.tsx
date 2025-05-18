@@ -51,12 +51,32 @@ const JourneySection = () => {
           >
             <div className="timeline-dot"></div>
             <div className="md:grid md:grid-cols-[200px_1fr] gap-8 md:pl-16">
-              <div className="mb-4 md:mb-0">
+              <div className="mb-4 md:mb-0 flex flex-col">
                 <h3 className="text-xl font-semibold">IT Support Technician</h3>
-                <p className="text-primary font-medium">Stratford Hall</p>
-                <p className="text-sm text-muted-foreground">JAN 2024 - AUG 2024</p>
+                <div className="flex items-center gap-2 mt-1">
+                  {stratfordFavicon && (
+                    <img 
+                      src={stratfordFavicon} 
+                      alt="Stratford Hall logo" 
+                      className="w-4 h-4 object-contain"
+                    />
+                  )}
+                  <a 
+                    href="https://www.stratfordhall.ca/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary font-medium hover:underline"
+                  >
+                    Stratford Hall
+                  </a>
+                </div>
+                <p className="text-sm text-muted-foreground mt-1">JAN 2024 - AUG 2024</p>
               </div>
-              <div className="p-6 bg-primary/5 rounded-lg">
+              <motion.div 
+                className="p-6 bg-primary/5 rounded-lg"
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
                 <ul className="space-y-2 list-disc ml-5 text-sm md:text-base">
                   <li>Delivered Tier 1 technical support to 120+ staff and students across workstations, laptops, printers, mobile devices, and AV systems.</li>
                   <li>Troubleshot and resolved 90% of software, network, and hardware issues on first contact for local and remote users.</li>
@@ -65,7 +85,7 @@ const JourneySection = () => {
                   <li>Conducted preventative maintenance and routine diagnostics on shared classroom tech and workstation setups.</li>
                   <li>Administered onboarding/offboarding processes using Google Workspace, Microsoft 365, MDM tools (Mosyle) and VoIP 3CX Phone System.</li>
                 </ul>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
 
@@ -79,13 +99,33 @@ const JourneySection = () => {
           >
             <div className="timeline-dot"></div>
             <div className="md:grid md:grid-cols-[200px_1fr] gap-8 md:pl-16">
-              <div className="mb-4 md:mb-0">
+              <div className="mb-4 md:mb-0 flex flex-col">
                 <h3 className="text-xl font-semibold">Computer Information Technology Diploma</h3>
-                <p className="text-primary font-medium">British Columbia Institute of Technology</p>
-                <p className="text-sm text-muted-foreground">2022 - 2024</p>
-                <p className="font-medium">GPA: 90%</p>
+                <div className="flex items-center gap-2 mt-1">
+                  {bcitFavicon && (
+                    <img 
+                      src={bcitFavicon} 
+                      alt="BCIT logo" 
+                      className="w-4 h-4 object-contain"
+                    />
+                  )}
+                  <a 
+                    href="https://www.bcit.ca/programs/computer-information-technology-diploma-full-time-5540dipma/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary font-medium hover:underline"
+                  >
+                    British Columbia Institute of Technology
+                  </a>
+                </div>
+                <p className="text-sm text-muted-foreground mt-1">2022 - 2024</p>
+                <p className="font-medium mt-1">GPA: 90%</p>
               </div>
-              <div className="p-6 bg-primary/5 rounded-lg">
+              <motion.div 
+                className="p-6 bg-primary/5 rounded-lg"
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
                 <div className="grid md:grid-cols-2 gap-4 items-start">
                   <img
                     src="https://pixabay.com/get/gef52cd873e4315992c735f4269b5550b92aa15ffeeb4d6f5a2d5a4212d986772bcc2f348e0b548023e763f18d926fc6c4042b2b57bf3d94654781823019c078b_1280.jpg"
@@ -97,7 +137,7 @@ const JourneySection = () => {
                     <p>Completed comprehensive training in system administration, networking, security, and software development with a focus on practical applications.</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>

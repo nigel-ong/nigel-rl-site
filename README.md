@@ -1,73 +1,243 @@
 # Nigel Ong's Personal Website
 
-A modern, responsive personal website for showcasing Nigel's technical experience, IT support background, and portfolio of projects.
+A modern, responsive personal website for showcasing Nigel's technical experience, IT support background, and portfolio of projects. Built with React, Vite, and TailwindCSS.
 
-## Table of Contents
+## 📋 Table of Contents
 
-- [About](#about)
-- [Journey](#journey)
-- [Projects](#projects)
-- [Skills](#skills)
-- [Contact](#contact)
-- [Features](#features)
-  - [Light/Dark Mode](#lightdark-mode)
-  - [Navbar & Branding](#navbar--branding)
-- [Updating Content](#updating-content)
-- [Local Setup](#local-setup)
-- [GitHub Pages Deployment](#github-pages-deployment)
+- [Features Overview](#features-overview)
+- [How to Update Each Section](#how-to-update-each-section)
+  - [Updating the About Section](#updating-the-about-section)
+  - [Adding a New Job or Education Entry](#adding-a-new-job-or-education-entry)
+  - [Adding or Updating Projects](#adding-or-updating-projects)
+  - [Updating Technical Skills](#updating-technical-skills)
+  - [Updating Contact Information](#updating-contact-information)
+  - [Updating Images](#updating-images)
+- [How to Customize Colors](#how-to-customize-colors)
+- [How the Site Works (Explained Simply)](#how-the-site-works-explained-simply)
+- [Deployment Guide](#deployment-guide)
 
-## Overview
+## 🌟 Features Overview
 
-This website serves as Nigel Ong's professional portfolio, highlighting his IT support experience, technical skills, and projects. The site features a clean, modern design with both dark and light themes, a responsive layout, and smooth animations.
+This website includes:
 
-## Features
+- Modern, responsive design that works on all devices
+- Light and dark mode toggle that remembers user preference
+- Smooth scroll animations and transition effects
+- Interactive cursor spotlight effect
+- Project cards with hover animations
+- Clickable organization links with auto-fetched favicons
+- Video modal for project demos
+- Optimized for accessibility and performance
 
-### Light/Dark Mode
+## 🔧 How to Update Each Section
 
-The website features a fully implemented light and dark mode toggle that remembers user preferences via localStorage. All UI elements have proper color contrast in both modes.
+### Updating the About Section
 
-To modify the theme colors:
-- Edit the CSS variables in `client/src/index.css`
-- The current theme palette uses:
-  - Primary highlight: `#B7D3E9` (light blue)
-  - Secondary highlight: `#F1D2E7` (light pink)
-  - Dark mode background: Dark grey/black
-  - Light mode background: `#f2efe5`
+The "About" section content is directly in the `HeroSection.tsx` component:
 
-### Navbar & Branding
+1. Open `client/src/components/HeroSection.tsx`
+2. Find the paragraph text inside the `<p>` tags in the `prose` section
+3. Edit the text to update your personal information
+4. To change your profile image:
+   - Add a new image to `client/src/assets/`
+   - Update the `src` attribute in the `<img>` tag
 
-The navigation includes:
-- The logo "NigelOng" with "Nigel" in the primary color
-- Navigation links to each section
-- GitHub and LinkedIn icons
-- Dark/Light mode toggle
-- Mobile responsive hamburger menu
+### Adding a New Job or Education Entry
 
-## Updating Content
+The "Journey" section items are in the `JourneySection.tsx` component:
 
-### Content Structure
+1. Open `client/src/components/JourneySection.tsx`
+2. To add a new job:
+   - Copy one of the existing `<motion.div className="timeline-item">` blocks
+   - Paste it before or after existing entries (order matters - top entries appear first)
+   - Update the details:
+     - Job title in the `<h3>` tag
+     - Organization name in the link tag
+     - Update the organization URL
+     - Update the dates
+     - Update the bullet points in the `<ul>` list
 
-The website data is stored in `client/src/lib/data.ts`, making it easy to update without changing the components.
+For example:
+```jsx
+<motion.div
+  className="timeline-item mt-16"
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, margin: "-100px" }}
+  transition={{ duration: 0.6 }}
+>
+  <div className="timeline-dot"></div>
+  <div className="md:grid md:grid-cols-[200px_1fr] gap-8 md:pl-16">
+    <div className="mb-4 md:mb-0 flex flex-col">
+      <h3 className="text-xl font-semibold">YOUR NEW JOB TITLE</h3>
+      <div className="flex items-center gap-2 mt-1">
+        <a 
+          href="https://company-website.com/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-primary font-medium hover:underline"
+        >
+          Company Name
+        </a>
+      </div>
+      <p className="text-sm text-muted-foreground mt-1">MONTH YEAR - MONTH YEAR</p>
+    </div>
+    <motion.div 
+      className="p-6 bg-primary/5 rounded-lg"
+      whileHover={{ scale: 1.02 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+    >
+      <ul className="space-y-2 list-disc ml-5 text-sm md:text-base">
+        <li>First accomplishment or responsibility</li>
+        <li>Second accomplishment or responsibility</li>
+        <!-- Add more bullet points as needed -->
+      </ul>
+    </motion.div>
+  </div>
+</motion.div>
+```
 
-### Adding/Updating Projects
+3. Also add the website to the favicon fetching in the useEffect hook at the top of the component if you want to display the organization's logo.
 
-To add a new project:
+### Adding or Updating Projects
+
+Projects are defined in the data file:
+
 1. Open `client/src/lib/data.ts`
-2. Add a new entry to the `projects` array following the existing format:
+2. Find the `projects` array
+3. To add a new project, add a new object to the array using this format:
 
 ```typescript
 {
-  id: "unique-id",
-  title: "Project Title",
-  description: "Project description...",
-  tags: ["Tag1", "Tag2"],
-  imageUrl: "image-url-or-path",
-  badgeText: "Web App",
-  badgeColor: "primary", // or "secondary", "accent"
+  id: "unique-project-id", // Used internally (no spaces)
+  title: "Project Name",
+  description: "Brief description of your project",
+  tags: ["Technology1", "Technology2", "Technology3"],
+  imageUrl: "https://url-to-your-project-image.jpg", // Or use a local image in assets
+  badgeText: "Type of Project", // e.g., "Web App", "Mobile App", etc.
+  badgeColor: "primary", // Use "primary", "secondary", or "accent"
   links: {
-    demo: "https://demo-link.com", // optional
-    github: "https://github.com/link", // optional
-    video: "youtube-video-id", // optional
-    info: "https://info-link.com" // optional
+    demo: "https://demo-link.com", // Optional: Link to live demo
+    github: "https://github.com/your-repo", // Optional: Link to GitHub repo
+    video: "youtube-video-id", // Optional: YouTube video ID for demos
+    info: "https://additional-info.com" // Optional: Link to more information
   }
 }
+```
+
+4. To update existing projects, just modify the information in the existing objects.
+
+### Updating Technical Skills
+
+Skills are also defined in the data file:
+
+1. Open `client/src/lib/data.ts`
+2. Find the `skills` array
+3. Each object represents a skill category:
+
+```typescript
+{
+  category: "Category Name", // e.g., "Frontend", "Backend", etc.
+  icon: "Icon component or string", // IconName from react-icons
+  items: ["Skill1", "Skill2", "Skill3"], // List of skills in this category
+  color: "primary" // Use "primary", "secondary", or "accent"
+}
+```
+
+4. To add/remove skills, modify the `items` array
+5. To add a new category, add a new object following the same format
+
+### Updating Contact Information
+
+Contact information is in the data file:
+
+1. Open `client/src/lib/data.ts`
+2. Find the `contactInfo` array
+3. Each object represents a contact method:
+
+```typescript
+{
+  type: "Email", // Type of contact (e.g., "Email", "GitHub", "LinkedIn")
+  value: "your@email.com", // The actual contact information
+  link: "mailto:your@email.com", // The URL or action when clicked
+  icon: <IconComponent />, // Icon component from react-icons
+  display: "your@email.com" // Optional: Custom display text
+}
+```
+
+### Updating Images
+
+To add or update images:
+
+1. Place new images in the `client/src/assets/` folder
+2. Reference them in components using:
+   - Direct imports: `import myImage from '@/assets/image.jpg'`
+   - Or with path: `src="/src/assets/image.jpg"`
+
+## 🎨 How to Customize Colors
+
+The site uses TailwindCSS with custom colors. To update the color scheme:
+
+1. Open `client/src/index.css`
+2. Find the `:root` and `.dark` sections
+3. Modify the CSS variables:
+   - Light mode primary: `--primary: 221 71% 57%` (HSL values for #567ACE)
+   - Dark mode primary: `--primary: 203 53% 81%` (HSL values for #B7D3E9)
+   - Secondary color: `--secondary: 328 63% 90%` (HSL values for #F1D2E7)
+
+For example, to change the primary color in light mode:
+```css
+:root {
+  /* other variables */
+  --primary: 210 100% 50%; /* Change to your desired HSL values */
+}
+```
+
+To change cursor spotlight and other gradients:
+1. Find the relevant section in `client/src/index.css` (search for ".cursor-spotlight")
+2. Modify the radial-gradient values to use your preferred colors
+
+## ⚙️ How the Site Works (Explained Simply)
+
+This website uses these main technologies:
+- **React**: Makes the site interactive
+- **Vite**: Makes the site load fast
+- **TailwindCSS**: Makes the styling easy
+- **Framer Motion**: Makes the animations smooth
+
+Here's how the files connect:
+
+1. **The Structure**:
+   - `/client`: Contains everything you see on the screen
+     - `/src/components`: Individual pieces of the website (like building blocks)
+     - `/src/assets`: Images and other files
+     - `/src/lib`: Helper files and data
+     - `/src/hooks`: Special functions that add features
+   - `/server`: Handles behind-the-scenes stuff (not used much on this site)
+   - `/shared`: Files shared between client and server
+
+2. **How It Works**:
+   - `App.tsx` is like the main container that holds everything
+   - Each section (Hero, Journey, Skills, Projects, Contact) is a separate component
+   - When you edit `data.ts`, it automatically updates what you see on the website
+   - The animations use Framer Motion, which makes things move smoothly
+   - The dark/light mode uses a special "hook" to remember your preference
+
+3. **The Magic Parts**:
+   - When you click a navigation link, it smoothly scrolls to that section
+   - The cursor spotlight follows your mouse around
+   - Project cards grow slightly when you hover over them
+   - The timeline dots connect together to show your journey
+   - The site remembers if you prefer dark or light mode
+
+## 📦 Deployment Guide
+
+This site can be easily deployed to GitHub Pages:
+
+1. Create a GitHub repository for your website
+2. Push your code to the repository
+3. Enable GitHub Pages in the repository settings
+4. Set the source branch to `main` and the folder to `/root`
+5. Your site will be available at `https://username.github.io/repository-name/`
+
+For more detailed deployment instructions, check out the GitHub Pages documentation.

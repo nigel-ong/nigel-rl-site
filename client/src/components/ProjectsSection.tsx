@@ -26,11 +26,15 @@ const ProjectsSection = () => {
         <div className="grid md:grid-cols-2 gap-8 section-enter">
           {/* Project 1: MemoRizz */}
           <motion.div
-            className="bg-card text-card-foreground rounded-xl shadow-lg overflow-hidden transition-transform hover:-translate-y-2 duration-300"
+            className="bg-card text-card-foreground rounded-xl shadow-lg overflow-hidden"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
+            whileHover={{ 
+              scale: 1.03,
+              boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+            }}
           >
             <div className="relative">
               <img
@@ -77,11 +81,15 @@ const ProjectsSection = () => {
 
           {/* Project 2: Pose IT */}
           <motion.div
-            className="bg-card text-card-foreground rounded-xl shadow-lg overflow-hidden transition-transform hover:-translate-y-2 duration-300"
+            className="bg-card text-card-foreground rounded-xl shadow-lg overflow-hidden"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            whileHover={{ 
+              scale: 1.03,
+              boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+            }}
           >
             <div className="relative">
               <img
