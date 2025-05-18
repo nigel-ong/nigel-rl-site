@@ -129,13 +129,18 @@ const JourneySection = () => {
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
+                {/* to have it 1 large string */}
+                {/* <div className="grid gap-4 items-start"> */}
+
+                {/* to have it 2 columns (image + text)  */}
                 <div className="grid md:grid-cols-2 gap-4 items-start">
-                  {/* <img
+                  <img
                     src="https://www.bcit.ca/wp-content/uploads/2020/07/BCIT-DT-18-scaled.jpg"
                     alt="BCIT Campus"
                     className="w-full h-auto rounded-lg shadow-md"
                     loading="lazy"
-                  /> */}
+                  />
+                  
                   <div>
                     <p>Completed comprehensive training in system administration, networking, security, and software development with a focus on practical applications.</p>
                   </div>
