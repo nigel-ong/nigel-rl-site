@@ -84,7 +84,7 @@ const HeroSection = () => {
           >
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-md overflow-hidden border-2 border-primary/60 shadow-lg">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
+                src="/src/assets/BCIT_DT-201-samsung.jpg" 
                 alt="Nigel Ong" 
                 className="w-full h-full object-cover"
                 loading="lazy"

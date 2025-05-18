@@ -1,6 +1,32 @@
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+
+interface Organization {
+  name: string;
+  url: string;
+  favicon?: string;
+}
 
 const JourneySection = () => {
+  const [bcitFavicon, setBcitFavicon] = useState<string | null>(null);
+  const [stratfordFavicon, setStratfordFavicon] = useState<string | null>(null);
+  
+  useEffect(() => {
+    // Attempt to fetch favicons
+    const fetchFavicon = async (url: string, setter: (url: string | null) => void) => {
+      try {
+        // Use Google's favicon service as a fallback
+        const faviconUrl = `https://www.google.com/s2/favicons?domain=${url}&sz=32`;
+        setter(faviconUrl);
+      } catch (error) {
+        console.error("Error fetching favicon:", error);
+        setter(null);
+      }
+    };
+    
+    fetchFavicon("https://www.bcit.ca", setBcitFavicon);
+    fetchFavicon("https://www.stratfordhall.ca", setStratfordFavicon);
+  }, []);
   return (
     <section id="journey" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">

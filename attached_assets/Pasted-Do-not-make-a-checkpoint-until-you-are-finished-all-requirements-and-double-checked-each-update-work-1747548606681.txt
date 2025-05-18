@@ -1,0 +1,74 @@
+Do not make a checkpoint until you are finished all requirements and double checked each update works from the prompts! Hi Replit! We’re almost done — just need to make some final improvements to polish the site.
+
+---
+
+## 🖱 Mouse Hover Effect
+
+- Adjust the **mouse tracking effect**:
+    - Make it **centered on the cursor**, not offset to the bottom-right.
+    - Slightly **reduce the size** of the effect for subtlety.
+
+---
+
+## Update the image with the image I attached
+
+- I attached an image that I want the main image to be used with.
+
+---
+
+## 🧭 Professional Journey Section Enhancements
+
+1. **Clickable Links**:
+    - Make the organization names clickable:
+        - **BCIT** → https://www.bcit.ca/programs/computer-information-technology-diploma-full-time-5540dipma/
+        - **Stratford Hall** → https://www.stratfordhall.ca/
+2. **Logos / Icons**:
+    - Move organization image to the **left side of each entry**, next to the organization name.
+    - If no logo image is provided manually, **fallback to the website’s favicon** using the provided URL.
+        - Example: auto-fetch favicon for `https://www.bcit.ca/`
+3. **Hover Animation**:
+    - When hovering over a journey entry:
+        - Add a subtle **scale-up animation** (slightly increase size on hover).
+        - Make it smooth, lightweight, and consistent.
+
+---
+
+## 🚀 Featured Projects Section
+
+- Add interactive hover effects:
+    - On hover, each project card should **scale slightly larger**.
+    - Add **a dynamic animation** (like shadow/tilt, parallax, or subtle pop effect).
+    - Maintain performance on mobile — avoid heavy JS or large-scale effects.
+
+---
+
+## 📘 README.md Enhancements
+
+Please expand the `README.md` to include:
+
+### A. 🔧 How to Update Each Section
+
+- Step-by-step instructions on:
+    - Adding a new job (journey section)
+    - Adding a new project
+    - Adding or changing technical skills
+    - Updating personal info or About section
+    - How to update the color of the hover effect
+    - How and where to add and update images
+
+### B. 🎨 How to Customize Colors
+
+- Show where to update the **primary brand colors** and theme variables (light/dark modes)
+- Point to Tailwind or CSS variables with examples
+
+### C. ⚙️ How the Site Works (Explain Like I’m 10)
+
+Provide a clear explanation of:
+
+- The **tech stack** used (e.g., Vite, React, Tailwind, Express, etc.)
+- What each folder does:
+    - `/client`, `/server`, `/shared`, `/attached_assets`
+- How files connect together
+- Example: “When you edit `journey.ts`, this updates the Journey section UI automatically through X component”
+
+Make this beginner-friendly and instructional — so a 10-year-old could confidently update the site.

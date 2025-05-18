@@ -36,6 +36,9 @@ const CursorSpotlight = () => {
         x: mousePosition.x,
         y: mousePosition.y,
       }}
+      style={{
+        transform: 'translate(-50%, -50%)'
+      }}
       transition={{
         type: "spring",
         mass: 0.1,
