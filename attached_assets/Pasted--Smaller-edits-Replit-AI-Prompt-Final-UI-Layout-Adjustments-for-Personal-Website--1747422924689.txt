@@ -21,7 +21,7 @@
     - Instead of large cards, show **icons (Email, LinkedIn, GitHub)** with subtle hover effects.
     - Ensure this layout is **responsive and centered** in both mobile and desktop views.
     - Icon links:
-        - Email: `mailto:nigel.ong00@gmail.com`
+        - Email: `mailto:nigelong.it@gmail.com`
         - LinkedIn: [`https://linkedin.com/in/niong`](https://linkedin.com/in/niong)
         - GitHub: [`https://github.com/nigel-ong`](https://github.com/nigel-ong)
     

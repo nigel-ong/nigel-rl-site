@@ -103,10 +103,10 @@ export interface ContactInfo {
 export const contactInfo: ContactInfo[] = [
   {
     type: "Email",
-    value: "nigel.ong00@gmail.com",
-    link: "mailto:nigel.ong00@gmail.com",
+    value: "nigelong.it@gmail.com",
+    link: "mailto:nigelong.it@gmail.com",
     icon: "mail",
-    display: "nigel.ong00@gmail.com"
+    display: "nigelong.it@gmail.com"
   },
   {
     type: "LinkedIn",

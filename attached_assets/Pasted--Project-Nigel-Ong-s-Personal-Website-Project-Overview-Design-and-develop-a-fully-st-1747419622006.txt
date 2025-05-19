@@ -184,7 +184,7 @@ Note: Account data is temporary. [Live Demo](https://memorizz-z18i.onrender.com/
 
 - Do not include a contact form for visitors to enter information
 - Display icons with links:
-    - Email: nigel.ong00@gmail.com
+    - Email: nigelong.it@gmail.com
     - LinkedIn: [niong](https://linkedin.com/in/niong)
     - GitHub: [nigel-ong](https://github.com/nigel-ong)
 
