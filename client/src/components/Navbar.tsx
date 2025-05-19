@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "@/components/ThemeProvider";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { HiSun, HiMoon } from "react-icons/hi";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 
@@ -91,6 +91,15 @@ const Navbar = () => {
 
           <div className="flex items-center space-x-4">
             {/* Social & Theme Icons */}
+            <a
+              href="mailto:nigelong.it@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Email"
+              className="text-xl hover:text-primary transition-colors"
+            >
+              <FaEnvelope />
+            </a>
             <a
               href="https://github.com/nigel-ong"
               target="_blank"
