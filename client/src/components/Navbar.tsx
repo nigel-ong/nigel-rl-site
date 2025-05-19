@@ -93,8 +93,6 @@ const Navbar = () => {
             {/* Social & Theme Icons */}
             <a
               href="mailto:nigelong.it@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Email"
               className="text-xl hover:text-primary transition-colors"
             >
