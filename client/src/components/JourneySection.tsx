@@ -46,7 +46,7 @@ const JourneySection = () => {
         <div className="timeline-container pb-12 section-enter">
           {/* Work Experience */}
           <motion.div
-            className="timeline-item"
+            className="timeline-item mt-16 first:mt-0"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -91,7 +91,7 @@ const JourneySection = () => {
 
           
           <motion.div
-            className="timeline-item"
+            className="timeline-item mt-16 first:mt-0"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -140,7 +140,7 @@ const JourneySection = () => {
 
           {/* Education */}
           <motion.div
-            className="timeline-item mt-16"
+            className="timeline-item mt-16 first:mt-0"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
