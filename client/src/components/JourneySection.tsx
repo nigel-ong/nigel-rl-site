@@ -10,6 +10,7 @@ interface Organization {
 const JourneySection = () => {
   const [bcitFavicon, setBcitFavicon] = useState<string | null>(null);
   const [stratfordFavicon, setStratfordFavicon] = useState<string | null>(null);
+  const [nucleusFavicon, setNucleusFavicon] = useState<string | null>(null);
   
   useEffect(() => {
     // Attempt to fetch favicons
@@ -26,6 +27,7 @@ const JourneySection = () => {
     
     fetchFavicon("https://www.bcit.ca", setBcitFavicon);
     fetchFavicon("https://www.stratfordhall.ca", setStratfordFavicon);
+    fetchFavicon("https://yournucleus.ca", setNucleusFavicon);
   }, []);
 
   return (
@@ -43,6 +45,51 @@ const JourneySection = () => {
 
         <div className="timeline-container pb-12 section-enter">
           {/* Work Experience */}
+          <motion.div
+            className="timeline-item"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="timeline-dot"></div>
+            <div className="md:grid md:grid-cols-[200px_1fr] gap-8 md:pl-16">
+              <div className="mb-4 md:mb-0 flex flex-col">
+                <h3 className="text-xl font-semibold">Support Specialist</h3>
+                <div className="flex items-center gap-2 mt-1">
+                  {stratfordFavicon && (
+                    <img 
+                      src={nucleusFavicon} 
+                      alt="Nucleus logo" 
+                      className="w-4 h-4 object-contain"
+                    />
+                  )}
+                  <a 
+                    href="https://yournucleus.ca/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary font-medium hover:underline"
+                  >
+                    Nucleus Networks
+                  </a>
+                </div>
+                <p className="text-sm text-muted-foreground mt-1">JUN 2025 - PRESENT</p>
+              </div>
+              {/* Journey content card with hover animation and dark mode glow effect */}
+              <motion.div 
+                className="p-6 bg-primary/5 rounded-lg hoverable-content"
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                <ul className="space-y-2 list-disc ml-5 text-sm md:text-base">
+                  <li>TBD</li>
+                  <li>TBD</li>
+                </ul>
+              </motion.div>
+            </div>
+          </motion.div>
+
+          
           <motion.div
             className="timeline-item"
             initial={{ opacity: 0, y: 20 }}
