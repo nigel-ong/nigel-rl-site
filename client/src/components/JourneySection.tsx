@@ -73,7 +73,7 @@ const JourneySection = () => {
                     Nucleus Networks
                   </a>
                 </div>
-                <p className="text-sm text-muted-foreground mt-1">JUN 2025 - PRESENT</p>
+                <p className="text-sm text-muted-foreground mt-1">JUN 2025 - MAR 2026</p>
               </div>
               {/* Journey content card with hover animation and dark mode glow effect */}
               <motion.div 
