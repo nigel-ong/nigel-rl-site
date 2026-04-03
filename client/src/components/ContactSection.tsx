@@ -4,10 +4,10 @@ import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 const contactInfo = [
   {
     type: "Email",
-    value: "nigel.ong00@gmail.com",
-    link: "mailto:nigel.ong00@gmail.com",
+    value: "nigelong.it@gmail.com",
+    link: "mailto:nigelong.it@gmail.com",
     icon: <FaEnvelope className="text-2xl" />,
-    display: "nigel.ong00@gmail.com"
+    display: "nigelong.it@gmail.com"
   },
   {
     type: "LinkedIn",
