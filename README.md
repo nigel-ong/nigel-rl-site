@@ -31,6 +31,8 @@ This website includes:
 
 ## 🔧 How to Update Each Section
 
+### For gods sake enter WSL mode in terminal to save yourself a headache in regards to SSH key and CRLF line endings
+
 ### Updating the About Section
 
 The "About" section content is directly in the `HeroSection.tsx` component:
