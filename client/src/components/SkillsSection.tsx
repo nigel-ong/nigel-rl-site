@@ -37,8 +37,8 @@ const SkillsSection = () => {
       category: "Operating Systems",
       icon: <FaLaptop className="text-2xl text-primary mr-3" />,
       items: [
-        { name: "macOS", details: "Daily driver for development, 5+ years experience" },
         { name: "Windows", details: "Administration, troubleshooting, and support for 100+ users" },
+        { name: "macOS", details: "Daily driver for development, 5+ years experience" },
         { name: "Linux", details: "Server administration and command line proficiency" },
         { name: "iOS", details: "Mobile device management and app deployment" }
       ],
@@ -59,9 +59,9 @@ const SkillsSection = () => {
       category: "Admin Tools",
       icon: <FaUserCog className="text-2xl text-primary mr-3" />,
       items: [
-        { name: "Google Admin", details: "Workspace user management and security" },
-        { name: "Mosyle", details: "MDM for Apple devices, policy and profile management" },
         { name: "Active Directory", details: "User and group management, GPO" },
+        { name: "Google Admin", details: "Workspace user management and security" },
+        { name: "Microsoft Entra", details: "UPN, user, group updates" },
         { name: "MDM Solutions", details: "Mobile device enrollment and security" }
       ],
       color: "primary"
@@ -72,7 +72,7 @@ const SkillsSection = () => {
       items: [
         { name: "MS Office", details: "Advanced Excel, Word, PowerPoint, and Teams" },
         { name: "Google Workspace", details: "Admin, training, and power user" },
-        { name: "Meraki", details: "Network configuration and monitoring" },
+        { name: "ScreenConnect", details: "Remote access and configuration" },
         { name: "VoIP Systems", details: "3CX setup and management" },
       ],
       color: "secondary"
@@ -81,10 +81,10 @@ const SkillsSection = () => {
       category: "ITSM & Ticketing",
       icon: <FaHeadset className="text-2xl text-primary mr-3" />,
       items: [
-        { name: "SharePoint", details: "Document management and workspace setup" },
-        { name: "Documentation", details: "Process creation and knowledge base management" },
-        { name: "Asset Management", details: "Inventory tracking and lifecycle" },
-        { name: "Lifecycle Management", details: "Hardware refresh planning and execution" }
+        { name: "ServiceNow", details: "Ticketing system used at Equinox Gold" },
+        { name: "Connectwise Manage", details: "Ticketing system used at Nucleus Networks" },
+        { name: "ZenDesk", details: "Ticketing system used at Cactus Clube Cafe" },
+        { name: "FreshDesk", details: "Ticketing system used at Triton Environmental Consultants" }
       ],
       color: "primary"
     },
