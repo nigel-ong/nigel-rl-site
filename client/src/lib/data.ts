@@ -56,7 +56,7 @@ export const skills: SkillCategory[] = [
   {
     category: "Operating Systems",
     icon: "computer",
-    items: ["macOS", "Windows", "Linux", "iOS"],
+    items: ["Windows", "macOS", "Linux", "iOS"],
     color: "primary"
   },
   {
@@ -68,19 +68,19 @@ export const skills: SkillCategory[] = [
   {
     category: "Admin Tools",
     icon: "admin",
-    items: ["Google Admin", "Mosyle", "Active Directory", "MDM Solutions"],
+    items: ["Active Directory", "Google Admin", "Microsoft Entra", "MDM Solutions"],
     color: "primary"
   },
   {
     category: "Applications",
     icon: "apps",
-    items: ["MS Office", "Google Workspace", "Meraki", "VoIP Systems"],
+    items: ["MS Office", "Google Workspace", "ScreenConnect", "VoIP Systems"],
     color: "secondary"
   },
   {
     category: "ITSM & Ticketing",
     icon: "customer-service",
-    items: ["SharePoint", "Documentation Workflows", "Asset Management", "Lifecycle Management"],
+    items: ["ServiceNow", "Connectwise Manage", "ZenDesk", "FreshDesk"],
     color: "primary"
   },
   {
@@ -103,10 +103,10 @@ export interface ContactInfo {
 export const contactInfo: ContactInfo[] = [
   {
     type: "Email",
-    value: "nigel.ong00@gmail.com",
-    link: "mailto:nigel.ong00@gmail.com",
+    value: "nigelong.it@gmail.com",
+    link: "mailto:nigelong.it@gmail.com",
     icon: "mail",
-    display: "nigel.ong00@gmail.com"
+    display: "nigelong.it@gmail.com"
   },
   {
     type: "LinkedIn",
