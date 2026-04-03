@@ -61,7 +61,7 @@ const JourneySection = () => {
             <div className="timeline-dot"></div>
             <div className="md:grid md:grid-cols-[200px_1fr] gap-8 md:pl-16">
               <div className="mb-4 md:mb-0 flex flex-col">
-                <h3 className="text-xl font-semibold">IT Support Specialist</h3>
+                <h3 className="text-xl font-semibold">IT Support Technician</h3>
                 <div className="flex items-center gap-2 mt-1">
                   {tritonFavicon && (
                     <img 
