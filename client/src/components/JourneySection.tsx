@@ -13,6 +13,7 @@ const JourneySection = () => {
   const [nucleusFavicon, setNucleusFavicon] = useState<string | null>(null);
   const [equinoxFavicon, setEquinoxFavicon] = useState<string | null>(null);
   const [cactusFavicon, setCactusFavicon] = useState<string | null>(null);
+  const [tritonFavicon, setTritonFavicon] = useState<string | null>(null);
   
   useEffect(() => {
     // Attempt to fetch favicons
@@ -31,7 +32,8 @@ const JourneySection = () => {
     fetchFavicon("https://www.stratfordhall.ca", setStratfordFavicon);
     fetchFavicon("https://yournucleus.ca", setNucleusFavicon);
     fetchFavicon("https://www.equinoxgold.com/", setEquinoxFavicon);
-    fetchFavicon("https://www.cactusclubcafe.com/", setEquinoxFavicon);
+    fetchFavicon("https://www.cactusclubcafe.com/", setCactusFavicon);
+    fetchFavicon("https://www.triton-env.com/", setTritonFavicon);
   }, []);
 
   return (
@@ -49,6 +51,52 @@ const JourneySection = () => {
 
         <div className="timeline-container pb-12 section-enter">
           {/* Work Experience */}
+          <motion.div
+            className="timeline-item mt-16 first:mt-0"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="timeline-dot"></div>
+            <div className="md:grid md:grid-cols-[200px_1fr] gap-8 md:pl-16">
+              <div className="mb-4 md:mb-0 flex flex-col">
+                <h3 className="text-xl font-semibold">IT Support Specialist</h3>
+                <div className="flex items-center gap-2 mt-1">
+                  {tritonFavicon && (
+                    <img 
+                      src={tritonFavicon} 
+                      alt="Triton logo" 
+                      className="w-4 h-4 object-contain"
+                    />
+                  )}
+                  <a 
+                    href="https://www.triton-env.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary font-medium hover:underline"
+                  >
+                    Triton Environmental Consultants
+                  </a>
+                </div>
+                <p className="text-sm text-muted-foreground mt-1">MAR 2026 - Present</p>
+              </div>
+              {/* Journey content card with hover animation and dark mode glow effect */}
+              <motion.div 
+                className="p-6 bg-primary/5 rounded-lg hoverable-content"
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                <ul className="space-y-2 list-disc ml-5 text-sm md:text-base">
+                  <li>Provided remote technical support through Pulseway, resolving user issues efficiently</li>
+                  <li>Managed and prioritized ticket queue using Freshdesk to meet SLA targets</li>
+                  <li>Facilitated user onboarding and account provisioning via JumpCloud Admin</li>
+                </ul>
+              </motion.div>
+            </div>
+          </motion.div>
+
+
           <motion.div
             className="timeline-item mt-16 first:mt-0"
             initial={{ opacity: 0, y: 20 }}
@@ -137,8 +185,8 @@ const JourneySection = () => {
                 <ul className="space-y-2 list-disc ml-5 text-sm md:text-base">
                   <li>Managed ticket queue using ServiceNow, ensuring timely resolution and escalation of incidents, maintaining SLA compliance and detailed documentation.</li>
                   <li>Supported Microsoft 365 applications including Teams, Outlook, SharePoint, and OneDrive.</li>
-                  <li>Provided remote support via ScreenConnect and Datto, diagnosing and resolving hardware, software, and connectivity issues for users across departments.</li>
-                  <li>Created and maintained user accounts in Active Directory, ensuring proper group memberships, and compliance with organizational on/offboarding procedures.</li>
+                  <li>Provided remote support via ScreenConnect and Datto, diagnosing and resolving hardware, software, and connectivity issues for users.</li>
+                  <li>Created and maintained user accounts in Active Directory, ensuring proper group memberships, and compliance with organizational procedures.</li>
                   <li>Administered folder access permissions within shared drives, managing security groups and access control across teams.</li>
                 </ul>
               </motion.div>
