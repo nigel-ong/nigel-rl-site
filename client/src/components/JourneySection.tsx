@@ -82,8 +82,11 @@ const JourneySection = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <ul className="space-y-2 list-disc ml-5 text-sm md:text-base">
-                  <li>TBD</li>
-                  <li>TBD</li>
+                  <li>Performed workstation provisioning and lifecycle management at the bench, including imaging, configuration, patching, and preparation of Windows and macOS devices.</li>
+                  <li>Executed user onboarding and offboarding across multiple tenants, managing account access, device assignment, and decommissioning.</li>
+                  <li>Managed service requests through ConnectWise Manage, prioritizing tickets based on SLA and client impact</li>
+                  <li>Provided remote technical support using ScreenConnect, troubleshooting endpoint, application, access, and connectivity issues across client environments.</li>
+                  <li>Maintained and updated IT Glue documentation, including standard operating procedures, onboarding workflows, and tenant-specific configurations.</li>
                 </ul>
               </motion.div>
             </div>
