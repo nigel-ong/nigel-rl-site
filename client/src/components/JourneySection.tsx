@@ -12,6 +12,7 @@ const JourneySection = () => {
   const [stratfordFavicon, setStratfordFavicon] = useState<string | null>(null);
   const [nucleusFavicon, setNucleusFavicon] = useState<string | null>(null);
   const [equinoxFavicon, setEquinoxFavicon] = useState<string | null>(null);
+  const [cactusFavicon, setCactusFavicon] = useState<string | null>(null);
   
   useEffect(() => {
     // Attempt to fetch favicons
@@ -30,6 +31,7 @@ const JourneySection = () => {
     fetchFavicon("https://www.stratfordhall.ca", setStratfordFavicon);
     fetchFavicon("https://yournucleus.ca", setNucleusFavicon);
     fetchFavicon("https://www.equinoxgold.com/", setEquinoxFavicon);
+    fetchFavicon("https://www.cactusclubcafe.com/", setEquinoxFavicon);
   }, []);
 
   return (
@@ -107,7 +109,7 @@ const JourneySection = () => {
               <div className="mb-4 md:mb-0 flex flex-col">
                 <h3 className="text-xl font-semibold">IT Support Specialist</h3>
                 <div className="flex items-center gap-2 mt-1">
-                  {stratfordFavicon && (
+                  {equinoxFavicon && (
                     <img 
                       src={equinoxFavicon} 
                       alt="Equinox Gold logo" 
@@ -123,7 +125,7 @@ const JourneySection = () => {
                     Equinox Gold
                   </a>
                 </div>
-                <p className="text-sm text-muted-foreground mt-1">Via Nucleus Networks</p>
+                <p className="text-sm text-muted-foreground mt-1">via Nucleus Networks</p>
                 <p className="text-sm text-muted-foreground mt-1">JUL 2025 - MAR 2026</p>
               </div>
               {/* Journey content card with hover animation and dark mode glow effect */}
@@ -138,6 +140,55 @@ const JourneySection = () => {
                   <li>Provided remote support via ScreenConnect and Datto, diagnosing and resolving hardware, software, and connectivity issues for end users across various departments.</li>
                   <li>Created and maintained user accounts in Active Directory, ensuring proper group memberships, access permissions, and compliance with organizational onboarding/offboarding procedures.</li>
                   <li>Administered folder access permissions within shared drives, managing security groups and access control to maintain data integrity and support collaboration across teams.</li>
+                </ul>
+              </motion.div>
+            </div>
+          </motion.div>
+
+
+          <motion.div
+            className="timeline-item mt-16 first:mt-0"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="timeline-dot"></div>
+            <div className="md:grid md:grid-cols-[200px_1fr] gap-8 md:pl-16">
+              <div className="mb-4 md:mb-0 flex flex-col">
+                <h3 className="text-xl font-semibold">IT Support Specialist</h3>
+                <div className="flex items-center gap-2 mt-1">
+                  {cactusFavicon && (
+                    <img 
+                      src={cactusFavicon} 
+                      alt="Cactus Club Cafe logo" 
+                      className="w-4 h-4 object-contain"
+                    />
+                  )}
+                  <a 
+                    href="https://www.cactusclubcafe.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary font-medium hover:underline"
+                  >
+                    Cactus Club Cafe
+                  </a>
+                </div>
+                <p className="text-sm text-muted-foreground mt-1">via Nucleus Networks</p>
+                <p className="text-sm text-muted-foreground mt-1">OCT 2025 - NOV 2025</p>
+              </div>
+              {/* Journey content card with hover animation and dark mode glow effect */}
+              <motion.div 
+                className="p-6 bg-primary/5 rounded-lg hoverable-content"
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                <ul className="space-y-2 list-disc ml-5 text-sm md:text-base">
+                  <li>Onboarded new users through Google Admin Console and Active Directory, ensuring accurate account provisioning and access controls.</li>
+                  <li>Managed service requests in Zendesk, ensuring timely resolution and detailed ticket documentation.</li>
+                  <li>Coordinated with AppleCare Enterprise to arrange hardware replacements and manage warranty service cases.</li>
+                  <li>Managed Apple Business Manager tasks, including releasing devices and removing them from organizational management during offboarding.</li>
+                  <li>Provided remote technical support using RealVNC, troubleshooting end-user issues across hardware, software, and access requests.</li>
                 </ul>
               </motion.div>
             </div>
