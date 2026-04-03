@@ -86,10 +86,10 @@ const JourneySection = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <ul className="space-y-2 list-disc ml-5 text-sm md:text-base">
-                  <li>Performed workstation provisioning and lifecycle management at the bench, including imaging, configuration, patching, and preparation of Windows and macOS devices.</li>
+                  <li>Performed workstation provisioning and lifecycle management, including imaging, configuration, patching of Windows and macOS devices.</li>
                   <li>Executed user onboarding and offboarding across multiple tenants, managing account access, device assignment, and decommissioning.</li>
                   <li>Managed service requests through ConnectWise Manage, prioritizing tickets based on SLA and client impact</li>
-                  <li>Provided remote technical support using ScreenConnect, troubleshooting endpoint, application, access, and connectivity issues across client environments.</li>
+                  <li>Provided remote technical support using ScreenConnect, troubleshooting endpoint, application, access, and connectivity issues across clients.</li>
                   <li>Maintained and updated IT Glue documentation, including standard operating procedures, onboarding workflows, and tenant-specific configurations.</li>
                 </ul>
               </motion.div>
@@ -135,11 +135,11 @@ const JourneySection = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <ul className="space-y-2 list-disc ml-5 text-sm md:text-base">
-                  <li>Managed ticket queue using ServiceNow, ensuring timely resolution and proper escalation of incidents while maintaining SLA compliance and detailed documentation.</li>
+                  <li>Managed ticket queue using ServiceNow, ensuring timely resolution and escalation of incidents, maintaining SLA compliance and detailed documentation.</li>
                   <li>Supported Microsoft 365 applications including Teams, Outlook, SharePoint, and OneDrive.</li>
-                  <li>Provided remote support via ScreenConnect and Datto, diagnosing and resolving hardware, software, and connectivity issues for end users across various departments.</li>
-                  <li>Created and maintained user accounts in Active Directory, ensuring proper group memberships, access permissions, and compliance with organizational onboarding/offboarding procedures.</li>
-                  <li>Administered folder access permissions within shared drives, managing security groups and access control to maintain data integrity and support collaboration across teams.</li>
+                  <li>Provided remote support via ScreenConnect and Datto, diagnosing and resolving hardware, software, and connectivity issues for users across departments.</li>
+                  <li>Created and maintained user accounts in Active Directory, ensuring proper group memberships, and compliance with organizational on/offboarding procedures.</li>
+                  <li>Administered folder access permissions within shared drives, managing security groups and access control across teams.</li>
                 </ul>
               </motion.div>
             </div>
